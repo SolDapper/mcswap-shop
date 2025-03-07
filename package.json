@@ -1,6 +1,6 @@
 {
   "name": "mcswap-market",
-  "version": "0.0.4-dev",
+  "version": "0.0.5-dev",
   "description": "The McSwap Market Module",
   "main": "mcswap-market.js",
   "type": "module",
@@ -12,11 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "@fontsource/ubuntu": "^5.2.5",
-    "dotenv": "^16.4.7",
-    "events": "^3.3.0",
     "jquery": "^3.7.1",
     "mcswap-sdk": "^0.2.9",
-    "process": "^0.11.10",
     "toastify-js": "^1.12.0"
   }
 }

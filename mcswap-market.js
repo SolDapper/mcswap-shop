@@ -393,7 +393,7 @@ class mcswapMarket {
 
         const currentYear = new Date().getFullYear();
         ele += "<div id='mcswap-poweredby'>";
-            ele += "Powered by <a id='mcswap-poweredby-copy' href='#'> McSwap Market</a> &copy; "+currentYear;
+            ele += "Powered by <a id='mcswap-poweredby-copy' href='https://www.npmjs.com/package/mcswap-market'> McSwap Market</a> &copy; "+currentYear;
         ele += "</div>";
 
         ele += "</div>";
