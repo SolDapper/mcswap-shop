@@ -312,8 +312,6 @@ class mcswapMarket {
             ele += "<div class='mcswap-spacer-b'></div>";
             ele += "<input disabled id='sol-amount' data-decimals='9' placeholder='Amount' autocomplete='off' type='text' /><span id='sol-currency'>SOL</span>";
             ele += "<div class='mcswap-spacer-b'></div>";
-            ele += "<select id='create-priority'><option value='Min'>Minimum Priority</option><option value='Low'>Low Priority</option><option value='Medium'>Medium Priority</option><option value='High'>High Priority</option><option value='VeryHigh'>Very High Priority</option></select>";
-            ele += "<div class='mcswap-spacer-b'></div>";
             ele += "<button disabled id='mcswap-create-it'>Create Listing</button>";
             ele += "<div id='mcswap-create-fees'><span id='mcswap-create-fees-label'>Listing Fee</span><span id='mcswap-create-fees-value'>0.000000000</span></div>";
             ele += "</li>";
@@ -332,13 +330,16 @@ class mcswapMarket {
             ele += "<select disabled id='mcswap-display-me'><option>All Listings</option><option>My Listings</option></select>";
             ele += "<div class='mcswap-spacer-b'></div>";
 
-            ele += "<label id=''>Standards</label>";
+            ele += "<label>Standards</label>";
             ele += "<div class='mcswap-label-clear'>";
                 ele += "<input type='checkbox' disabled checked class='mcswap-radio' id='mcswap-radio-core' value='core' /> <span>CORE</span>";
                 ele += "<input type='checkbox' disabled checked class='mcswap-radio' id='mcswap-radio-nft' value='nft' /> <span>NFT</span>";
                 ele += "<input type='checkbox' disabled checked class='mcswap-radio' id='mcswap-radio-pnft' value='pnft' /> <span>PNFT</span>";
                 ele += "<input type='checkbox' disabled checked class='mcswap-radio' id='mcswap-radio-cnft' value='cnft' /> <span>CNFT</span>";
             ele += "</div>";
+            ele += "<div class='mcswap-spacer-b'></div>";
+
+            ele += "<select id='create-priority'><option value='Min'>Minimum Priority</option><option value='Low'>Low Priority</option><option value='Medium'>Medium Priority</option><option value='High'>High Priority</option><option value='VeryHigh'>Very High Priority</option></select>";
             ele += "<div class='mcswap-spacer-b'></div>";
 
             ele += "<button disabled id='mcswap-save-settings'>Save Settings</button>";
