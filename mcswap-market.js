@@ -303,14 +303,14 @@ class mcswapMarket {
 
             ele += "<li id='control-li-list'>";
             ele += "<label>New Listing</label>";
-            ele += "<input disabled id='mint-address' placeholder='Asset Id' type='text' /><button disabled id='mcswap-list-it'>Next</button><button id='mcswap-list-cancel'>Cancel</button>";
+            ele += "<input disabled id='mint-address' placeholder='Asset Id' autocomplete='off' type='text' /><button disabled id='mcswap-list-it'>Next</button><button id='mcswap-list-cancel'>Cancel</button>";
             ele += "<div class='mcswap-spacer'></div>";
             ele += "<label>Listing Details</label>";
-            ele += "<input disabled id='token-address' placeholder='Token Address' type='text' />";
+            ele += "<input disabled id='token-address' placeholder='Token Address' autocomplete='off' type='text' />";
             ele += "<div class='mcswap-spacer-b'></div>";
-            ele += "<input disabled id='token-amount' data-decimals='0' placeholder='Token Amount' type='text' /><span id='token-currency'></span>";
+            ele += "<input disabled id='token-amount' data-decimals='0' placeholder='Token Amount' autocomplete='off' type='text' /><span id='token-currency'></span>";
             ele += "<div class='mcswap-spacer-b'></div>";
-            ele += "<input disabled id='sol-amount' data-decimals='9' placeholder='Amount' type='text' /><span id='sol-currency'>SOL</span>";
+            ele += "<input disabled id='sol-amount' data-decimals='9' placeholder='Amount' autocomplete='off' type='text' /><span id='sol-currency'>SOL</span>";
             ele += "<div class='mcswap-spacer-b'></div>";
             ele += "<select id='create-priority'><option value='Min'>Minimum Priority</option><option value='Low'>Low Priority</option><option value='Medium'>Medium Priority</option><option value='High'>High Priority</option><option value='VeryHigh'>Very High Priority</option></select>";
             ele += "<div class='mcswap-spacer-b'></div>";
