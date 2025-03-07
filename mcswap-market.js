@@ -5,10 +5,7 @@ import $ from "jquery";
 import "@fontsource/ubuntu";
 import Toastify from 'toastify-js';
 import "toastify-js/src/toastify.css";
-import parcelPluginStaticFilesCopy from "parcel-plugin-static-files-copy";
 import mcswap from "mcswap-sdk";
-import "mcswap-sdk/mcswap-market.css";
-
 // import {PublicKey,Keypair,Connection,TransactionInstruction,SystemProgram,SYSVAR_INSTRUCTIONS_PUBKEY} from "@solana/web3.js";
 // import BufferLayout from "buffer-layout";
 // import * as splToken from "@solana/spl-token";
