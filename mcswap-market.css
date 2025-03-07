@@ -49,6 +49,7 @@ button, input, select, textarea{
 }
 button:focus, input:focus, select:focus, textarea:focus{
     outline: none;
+    background: #fff;
 }
 a, button, input, select, img{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
