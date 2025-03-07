@@ -1,7 +1,9 @@
 {
   "name": "mcswap-market",
-  "version": "0.0.1-dev",
-  "description": "the mcswap market module displays public nft listings powered by mcswap trustless escrows",
+  "version": "0.0.2-dev",
+  "description": "The McSwap Market Module",
+  "main": "mcswap-market.js",
+  "type": "module",
   "keywords": [
     "nft",
     "marketplace"
