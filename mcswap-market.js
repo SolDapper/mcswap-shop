@@ -259,8 +259,8 @@ class mcswapMarket {
             priority: this.priority,
             fee_create: this.fee_create,
             fee_execute: this.fee_execute,
-            enable_edit_theme: this.enable_edit_theme,
-            default_theme: this.default_theme,
+            // enable_edit_theme: this.enable_edit_theme,
+            // default_theme: this.default_theme,
             enable_edit_sort: this.enable_edit_sort,
             default_sort: this.default_sort,
             enable_edit_display: this.enable_edit_display,
@@ -318,9 +318,13 @@ class mcswapMarket {
 
             ele += "<li id='control-li-preferences'><button class='mcswap-clear-button' id='mcswap-clear-settings'>Reset</button>";
 
-            ele += "<label>Theme</label>";
-            ele += "<select disabled id='mcswap-theme'><option value='Dark'>Dark</option></select>";
+            ele += "<label>Fees</label>";
+            ele += "<select id='create-priority'><option value='Min'>Minimum Priority</option><option value='Low'>Low Priority</option><option value='Medium'>Medium Priority</option><option value='High'>High Priority</option><option value='VeryHigh'>Very High Priority</option></select>";
             ele += "<div class='mcswap-spacer-b'></div>";
+
+            // ele += "<label>Theme</label>";
+            // ele += "<select disabled id='mcswap-theme'><option value='Dark'>Dark</option></select>";
+            // ele += "<div class='mcswap-spacer-b'></div>";
 
             ele += "<label>Sort by</label>";
             ele += "<select disabled id='mcswap-sorter'><option value='Newest First'>Newest First</option value='Oldest First'><option>Oldest First</option><option value='Name A > Z'>Name A > Z</option><option value='Name Z > A'>Name Z > A</option><option value='Price High > Low'>Price High > Low</option><option value='Price Low > High'>Price Low > High</option></select>";
@@ -337,10 +341,6 @@ class mcswapMarket {
                 ele += "<input type='checkbox' disabled checked class='mcswap-radio' id='mcswap-radio-pnft' value='pnft' /> <span>PNFT</span>";
                 ele += "<input type='checkbox' disabled checked class='mcswap-radio' id='mcswap-radio-cnft' value='cnft' /> <span>CNFT</span>";
             ele += "</div>";
-            ele += "<div class='mcswap-spacer-b'></div>";
-
-            ele += "<label>Fees</label>";
-            ele += "<select id='create-priority'><option value='Min'>Minimum Priority</option><option value='Low'>Low Priority</option><option value='Medium'>Medium Priority</option><option value='High'>High Priority</option><option value='VeryHigh'>Very High Priority</option></select>";
             ele += "<div class='mcswap-spacer-b'></div>";
             
             ele += "<button disabled id='mcswap-save-settings'>Save Settings</button>";

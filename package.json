@@ -1,6 +1,6 @@
 {
   "name": "mcswap-market",
-  "version": "0.0.9-dev",
+  "version": "0.1.0-dev",
   "description": "The McSwap Market Module",
   "main": "mcswap-market.js",
   "type": "module",
