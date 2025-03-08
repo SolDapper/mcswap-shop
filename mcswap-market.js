@@ -339,9 +339,10 @@ class mcswapMarket {
             ele += "</div>";
             ele += "<div class='mcswap-spacer-b'></div>";
 
+            ele += "<label>Fees</label>";
             ele += "<select id='create-priority'><option value='Min'>Minimum Priority</option><option value='Low'>Low Priority</option><option value='Medium'>Medium Priority</option><option value='High'>High Priority</option><option value='VeryHigh'>Very High Priority</option></select>";
             ele += "<div class='mcswap-spacer-b'></div>";
-
+            
             ele += "<button disabled id='mcswap-save-settings'>Save Settings</button>";
 
             ele += "</li>";
