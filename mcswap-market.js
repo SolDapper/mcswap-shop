@@ -315,7 +315,7 @@ class mcswapMarket {
             ele += "<button disabled id='mcswap-create-it'>Create Listing</button>";
             ele += "<div id='mcswap-create-fees'><span id='mcswap-create-fees-label'>Listing Fee</span><span id='mcswap-create-fees-value'>0.000000000</span></div>";
             ele += "</li>";
-
+            
             ele += "<li id='control-li-preferences'><button class='mcswap-clear-button' id='mcswap-clear-settings'>Reset</button>";
 
             ele += "<label>Fees</label>";
