@@ -1,8 +1,8 @@
 {
-  "name": "mcswap-market",
-  "version": "0.1.0-dev",
-  "description": "The McSwap Market Module",
-  "main": "mcswap-market.js",
+  "name": "mcswap-shop",
+  "version": "0.0.1-dev",
+  "description": "The McSwap Shop Module",
+  "main": "mcswap-shop.js",
   "type": "module",
   "keywords": [
     "nft",
@@ -13,7 +13,7 @@
   "dependencies": {
     "@fontsource/ubuntu": "^5.2.5",
     "jquery": "^3.7.1",
-    "mcswap-sdk": "^0.2.9",
+    "mcswap-sdk": "^0.4.6",
     "toastify-js": "^1.12.0"
   }
 }

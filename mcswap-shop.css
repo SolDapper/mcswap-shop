@@ -1,4 +1,4 @@
-#mcswap-wrapper{
+.mcswap-wrapper{
     border-radius: 10px;
     border: 1px solid #000;
     background: #111;
@@ -31,6 +31,18 @@
 #mcswap-cover-close:hover{
     opacity: 0.25;
 }
+#mcswap-message{
+    font-family: "Ubuntu";
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    float: left;
+    height: 40px;
+    top: calc(50% - 30px);
+    font-size: 18px;
+    font-weight: bold;
+    animation: message-blinker 1.5s linear infinite;
+}
 #mcswap-lightbox{
     display: none;
     border-radius: 10px;
@@ -41,21 +53,29 @@
     width: 500px;
     height: 500px;
 }
-#mcswap-wrapper button, #mcswap-wrapper input, #mcswap-wrapper select, #mcswap-wrapper textarea{
+.mcswap-wrapper button, .mcswap-wrapper input, .mcswap-wrapper select, .mcswap-wrapper textarea{
     font-family: "Ubuntu";
 }
-#mcswap-wrapper button:focus, #mcswap-wrapper input:focus, #mcswap-wrapper select:focus, #mcswap-wrapper textarea:focus{
+.mcswap-wrapper button:focus, .mcswap-wrapper input:focus, .mcswap-wrapper select:focus, .mcswap-wrapper textarea:focus{
     outline: none;
 }
-#mcswap-wrapper a, #mcswap-wrapper button, #mcswap-wrapper input, #mcswap-wrapper select, #mcswap-wrapper img{
+.mcswap-wrapper a, .mcswap-wrapper button, .mcswap-wrapper input, .mcswap-wrapper select, .mcswap-wrapper img{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
 }
-#mcswap-wrapper button:hover{
+.mcswap-wrapper button:hover{
     text-shadow: 0 0 20px #154ab3;
     box-shadow: 0 0 10px 3px #154ab3;
 }
-#mcswap-header{
+.mcswap-wrapper button:disabled:hover{
+    background: #154ab3;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.mcswap-header{
     border-radius: 10px 10px 0 0;
     border: 1px solid #222;
     border-bottom: 1px solid #000;
@@ -63,12 +83,12 @@
     margin: 0;
     padding: 0;
 }
-#mcswap-header ul, #mcswap-header ul li{
+.mcswap-header ul, .mcswap-header ul li{
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-#mcswap-header ul li{
+.mcswap-header ul li{
     display: inline-block;
     width: 100%;
     line-height: 89px;
@@ -76,12 +96,12 @@
     font-weight: bold;
     vertical-align: top;
 }
-#mcswap-header ul li#mcswap-logo{
+.mcswap-header ul li.mcswap-logo{
     width: 75px;
     height: 90px;
-    padding-left: 15px;
+    padding-left: 14px;
 }
-#mcswap-header ul li#mcswap-logo img{
+.mcswap-header ul li.mcswap-logo img{
     display: block;
     padding: 0;
     margin: 15px 0 0 0;
@@ -89,37 +109,90 @@
     height: 60px;
     border-radius: 6px;
     border: 1px solid #1f1f1f;
+    cursor: pointer;
 }
-#mcswap-header ul li#mcswap-name{
-    width: calc(100% - 158px);
-    padding-left: 7px;
+.mcswap-header ul li.mcswap-name{
+    width: calc(100% - 226px);
+    padding-left: 6px;
+    overflow: hidden;
 }
-#mcswap-header ul li#mcswap-settings{
-    width: 58px;
+
+.mcswap-header ul li.mcswap-name .mcswap-name-span{
+    display: block;
+    line-height: 68px;
+    height: 67px;
+}
+
+.mcswap-header ul li.mcswap-name .mcswap-host{
+    display: block;
+    font-size: 10px;
+    color: #154ab3;
+    margin-top: -7px;
+    margin-left: 2px;
+    line-height: 100%;
+}
+
+.mcswap-header ul li.mcswap-settings{
+    width: 62px;
     height: 90px;
     margin: 0 0 0 0;
 }
-#mcswap-header ul li#mcswap-settings img{
-    display: block;
+.mcswap-header ul li.mcswap-refresh{
+    width: 62px;
+    height: 90px;
+    margin: 0 0 0 0;
+}
+.mcswap-header ul li.mcswap-settings img{
+    display: none;
     width: 40px;
     height: 40px;
-    margin: 23px 0 0 0;
+    margin: 26px 0 0 1px;
     padding: 0;
     transition: 0.3s;
     cursor: pointer;
 }
-#mcswap-header ul li#mcswap-settings img:hover{
+.mcswap-header ul li.mcswap-refresh img{
+    display: block;
+    width: 39px;
+    height: 39px;
+    margin: 26px 0 0 1px;
+    padding: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.mcswap-header ul li.mcswap-settings img:hover{
+    opacity: 0.25;
+}
+.mcswap-header ul li.mcswap-refresh img:hover{
     opacity: 0.25;
 }
 
-#mcswap-controls{
+.mcswap-header ul li.mcswap-refresh img.mcswap-rotating{
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    opacity: 0.25;
+}
+.mcswap-header ul li.mcswap-refresh img.mcswap-blinking{
+    animation: message-blinker 1.5s linear infinite;
+}
+.mcswap-header ul li.mcswap-refresh img.mcswap-rotating:hover{
+    opacity: 0.25;
+}
+.mcswap-header ul li.mcswap-refresh img.mcswap-blinking:hover{
+    opacity: 1.0;
+}
+
+.mcswap-controls{
     border-radius: 0 0 10px 10px;
     border: 1px solid #222;
     margin: 0;
     padding: 0;
     display: none;
 }
-#mcswap-controls ul, #mcswap-controls ul li{
+.mcswap-controls ul, .mcswap-controls ul li{
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -130,21 +203,21 @@
 .mcswap-spacer-b{
     height: 8px;
 }
-#mcswap-controls ul#control-ul li#control-li-list{
+.mcswap-controls ul.control-ul li.control-li-list{
     padding: 15px 15px 15px 15px;
     width: calc(50% - 50.5px);
-    border-right: 1px solid #000;
+    border-left: 1px solid #222;
     border-bottom: 1px solid #000;
-    min-height: 353px;
+    min-height: 352px;
     display: inline-block;
     vertical-align: top;
 }
-li#control-li-list label{
+li.control-li-list label{
     font-weight: bold;
     display: block;
     margin: -1px 0 9px 5px;
 }
-li#control-li-list input#mint-address{
+li.control-li-list input.mint-address{
     border: 0;
     background: #fff;
     color: #000;
@@ -158,11 +231,11 @@ li#control-li-list input#mint-address{
     line-height: 40px;
     transition: 0.3s;
 }
-li#control-li-list input#mint-address:disabled{
+li.control-li-list input.mint-address:disabled{
     opacity: 0.25;
     cursor: default;
 }
-li#control-li-list button#mcswap-list-it{
+li.control-li-list button.mcswap-list-it{
     cursor: pointer;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
@@ -181,17 +254,25 @@ li#control-li-list button#mcswap-list-it{
     vertical-align: top;
     transition: 0.3s;
 }
-li#control-li-list button#mcswap-list-it:hover{
+li.control-li-list button.mcswap-list-it:hover{
     background: #fff;
     color: #000;
     text-shadow: none;
 }
-li#control-li-list button#mcswap-list-it:disabled{
+li.control-li-list button.mcswap-list-it:disabled{
     opacity: 0.25;
     cursor: default;
 }
+li.control-li-list button.mcswap-list-it:disabled:hover{
+    background: #154ab3;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
+    box-shadow: none;
+}
 
-li#control-li-list button#mcswap-list-cancel{
+
+li.control-li-list button.mcswap-list-cancel{
     display: inline-block;
     display: none;
     cursor: pointer;
@@ -211,13 +292,24 @@ li#control-li-list button#mcswap-list-cancel{
     vertical-align: top;
     transition: 0.3s;
 }
-li#control-li-list button#mcswap-list-cancel:hover{
+li.control-li-list button.mcswap-list-cancel:hover{
     background: #fff;
     color: #000;
     text-shadow: none;
 }
+li.control-li-list button.mcswap-list-cancel:disabled{
+    opacity: 0.25;
+    cursor: default;
+}
+li.control-li-list button.mcswap-list-cancel:disabled:hover{
+    background: #154ab3;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
+    box-shadow: none;
+}
 
-li#control-li-list input#token-address{
+li.control-li-list input.token-address{
     border: 0;
     background: #fff;
     color: #000;
@@ -231,12 +323,12 @@ li#control-li-list input#token-address{
     line-height: 40px;
     transition: 0.3s;
 }
-li#control-li-list input#token-address:disabled{
+li.control-li-list input.token-address:disabled{
     opacity: 0.25;
     cursor: default;
 }
 
-li#control-li-list input#token-amount{
+li.control-li-list input.token-amount{
     border: 0;
     background: #fff;
     color: #000;
@@ -251,12 +343,12 @@ li#control-li-list input#token-amount{
     transition: 0.3s;
     margin-top: 3px;
 }
-li#control-li-list input#token-amount:disabled{
+li.control-li-list input.token-amount:disabled{
     opacity: 0.25;
     cursor: default;
 }
 
-li#control-li-list input#sol-amount{
+li.control-li-list input.sol-amount{
     border: 0;
     background: #fff;
     color: #000;
@@ -271,13 +363,13 @@ li#control-li-list input#sol-amount{
     transition: 0.3s;
     margin-top: 3px;
 }
-li#control-li-list input#sol-amount:disabled{
+li.control-li-list input.sol-amount:disabled{
     opacity: 0.25;
     cursor: default;
 }
 
 
-li#control-li-list button#mcswap-create-it{
+li.control-li-list button.mcswap-create-it{
     cursor: pointer;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
@@ -295,17 +387,24 @@ li#control-li-list button#mcswap-create-it{
     display: block;
     transition: 0.3s;
 }
-li#control-li-list button#mcswap-create-it:hover{
+li.control-li-list button.mcswap-create-it:hover{
     background: #fff;
     color: #000;
     text-shadow: none;
 }
-li#control-li-list button#mcswap-create-it:disabled{
+li.control-li-list button.mcswap-create-it:disabled{
     opacity: 0.25;
     cursor: default;
 }
+li.control-li-list button.mcswap-create-it:disabled:hover{
+    background: #154ab3;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
+    box-shadow: none;
+}
 
-li#control-li-sellers button#mcswap-update-it{
+li.control-li-sellers button.mcswap-update-it{
     cursor: pointer;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
@@ -323,17 +422,24 @@ li#control-li-sellers button#mcswap-update-it{
     display: block;
     transition: 0.3s;
 }
-li#control-li-sellers button#mcswap-update-it:hover{
+li.control-li-sellers button.mcswap-update-it:hover{
     background: #fff;
     color: #000;
     text-shadow: none;
 }
-li#control-li-sellers button#mcswap-update-it:disabled{
+li.control-li-sellers button.mcswap-update-it:disabled{
     opacity: 0.25;
     cursor: default;
 }
+li.control-li-sellers button.mcswap-update-it:disabled:hover{
+    background: #154ab3;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
+    box-shadow: none;
+}
 
-li#control-li-collections button#mcswap-update-collections{
+li.control-li-collections button.mcswap-update-collections{
     cursor: pointer;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
@@ -351,26 +457,33 @@ li#control-li-collections button#mcswap-update-collections{
     display: block;
     transition: 0.3s;
 }
-li#control-li-collections button#mcswap-update-collections:hover{
+li.control-li-collections button.mcswap-update-collections:hover{
     background: #fff;
     color: #000;
     text-shadow: none;
 }
-li#control-li-collections button#mcswap-update-collections:disabled{
+li.control-li-collections button.mcswap-update-collections:disabled{
     opacity: 0.25;
     cursor: default;
 }
+li.control-li-collections button.mcswap-update-collections:disabled:hover{
+    background: #154ab3;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
+    box-shadow: none;
+}
 
-#mcswap-controls ul#control-ul li#control-li-preferences{
+.mcswap-controls ul.control-ul li.control-li-preferences{
     padding: 15px 15px 15px 15px;
     width: calc(50% - 12px);
-    border-left: 1px solid #222;
+    border-right: 1px solid #000;
     border-bottom: 1px solid #000;
-    min-height: 353px;
+    min-height: 352px;
     display: inline-block;
     vertical-align: top;
 }
-li#control-li-preferences label{
+li.control-li-preferences label{
     font-weight: bold;
     display: inline-block;
     margin: -1px 0 9px 5px;
@@ -380,9 +493,7 @@ li#control-li-preferences label{
 .mcswap-label-clear{
     margin-top: -5px;
 }
-
-
-li#control-li-preferences select{
+li.control-li-preferences select{
     border: 0;
     background: #fff;
     color: #000;
@@ -397,14 +508,14 @@ li#control-li-preferences select{
     transition: 0.3s;
     margin-left: 15px;
     cursor: pointer;
-}
-li#control-li-preferences select:hover{
+}  
+li.control-li-preferences select:hover{
     box-shadow: 0 0 10px 3px #154ab3;
 }
-li#control-li-preferences select:disabled{
+li.control-li-preferences select:disabled{
     opacity: 0.25;
 }
-li#control-li-preferences button#mcswap-save-settings{
+li.control-li-preferences button.mcswap-save-settings{
     cursor: pointer;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
@@ -415,24 +526,31 @@ li#control-li-preferences button#mcswap-save-settings{
     height: 40px;
     line-height: 40px;
     width: 132px;
-    margin: 35px auto 24px auto;
+    margin: 30px auto 24px auto;
     padding: 0;
     font-weight: bold;
     transition: all .3s;
     display: block;
     transition: 0.3s;
 }
-li#control-li-preferences button#mcswap-save-settings:hover{
+li.control-li-preferences button.mcswap-save-settings:hover{
     background: #fff;
     color: #000;
     text-shadow: none;
 }
-li#control-li-preferences button#mcswap-save-settings:disabled{
+li.control-li-preferences button.mcswap-save-settings:disabled{
     opacity: 0.25;
     cursor: default;
 }
+li.control-li-preferences button.mcswap-save-settings:disabled:hover{
+    background: #154ab3;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
+    box-shadow: none;
+}
 
-#mcswap-controls ul#control-ul li#control-li-sellers{
+.mcswap-controls ul.control-ul li.control-li-sellers{
     padding: 15px 15px 15px 15px;
     width: calc(50% - 12px);
     border-top: 1px solid #222;
@@ -442,12 +560,12 @@ li#control-li-preferences button#mcswap-save-settings:disabled{
     display: inline-block;
     vertical-align: top;
 }
-li#control-li-sellers label{
+li.control-li-sellers label{
     font-weight: bold;
     display: block;
     margin: -1px 0 9px 5px;
 }
-li#control-li-sellers textarea{
+li.control-li-sellers textarea{
     border-radius: 10px;
     background: #fff;
     color: #000;
@@ -460,12 +578,12 @@ li#control-li-sellers textarea{
     border: 0;
     outline: none;
 }
-li#control-li-sellers textarea:disabled{
+li.control-li-sellers textarea:disabled{
     opacity: 0.25;
     cursor: default;
 }
 
-#mcswap-controls ul#control-ul li#control-li-collections{
+.mcswap-controls ul.control-ul li.control-li-collections{
     padding: 15px 15px 15px 15px;
     width: calc(50% - 50.5px);
     border-top: 1px solid #222;
@@ -475,12 +593,12 @@ li#control-li-sellers textarea:disabled{
     display: inline-block;
     vertical-align: top;
 }
-li#control-li-collections label{
+li.control-li-collections label{
     font-weight: bold;
     display: block;
     margin: -1px 0 9px 5px;
 }
-li#control-li-collections textarea{
+li.control-li-collections textarea{
     border-radius: 10px;
     background: #fff;
     color: #000;
@@ -493,17 +611,17 @@ li#control-li-collections textarea{
     border: 0;
     outline: none;
 }
-li#control-li-collections textarea:disabled{
+li.control-li-collections textarea:disabled{
     opacity: 0.25;
     cursor: default;
 }
 
-#mcswap-controls #control-ul{
+.mcswap-controls .control-ul{
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
-li#control-li-preferences input.mcswap-radio{
+li.control-li-preferences input.mcswap-radio{
     /* Double-sized Checkboxes */
     -ms-transform: scale(1.4); /* IE */
     -moz-transform: scale(1.4); /* FF */
@@ -514,7 +632,7 @@ li#control-li-preferences input.mcswap-radio{
     margin-top: 5px;
     cursor: pointer;
 }
-li#control-li-preferences span{
+li.control-li-preferences span{
     display: inline-block;
     margin-left: 3px;
     margin-right: 20px;
@@ -526,16 +644,19 @@ li#control-li-preferences span{
     height: 26px;
     vertical-align: top;
 }
-li#control-li-preferences input.mcswap-radio:first-of-type{
+
+li.control-li-preferences input.mcswap-radio:first-of-type{
     margin-left: 7px;
 }
 .mcswap-radio:disabled{
     opacity: 0.25;
     cursor: default;
 }
+li.control-li-preferences span.mcswap-standard-error{
+    color: #ffee00;
+}
 
-
-button.mcswap-clear-button{
+.mcswap-wrapper button.mcswap-clear-button{
     color: #154ab3;
     border: 0;
     outline: 0;
@@ -546,17 +667,17 @@ button.mcswap-clear-button{
     cursor: pointer;
     transition: 0.3s;
 }
-button.mcswap-clear-button:hover{
+.mcswap-wrapper button.mcswap-clear-button:hover{
     color: #fff;
     box-shadow: none;
     text-shadow: none;
 }
+.mcswap-wrapper button.mcswap-clear-settings{
+    margin-right: 0;
+}
 
 
-
-
-
-#mcswap-poweredby{
+.mcswap-poweredby{
     text-align: center;
     border-top: 1px solid #222;
     border-bottom: 0;
@@ -566,7 +687,7 @@ button.mcswap-clear-button:hover{
     font-size: 10px;
     font-weight: bold;
 }
-#mcswap-poweredby a{
+.mcswap-poweredby a{
     line-height: 60px;
     text-decoration: none;
     font-weight: bold;
@@ -576,21 +697,38 @@ button.mcswap-clear-button:hover{
     margin-left: 3px;
     margin-right: 3px;
 }
-#mcswap-poweredby a:hover{
+.mcswap-poweredby a:hover{
     color: #fff;
 }
 
-#mcswap-listings{
-    min-height: 300px;
+.mcswap-listings{
     border-radius: 0 0 10px 10px;
     border: 1px solid #222;
     margin: 0;
     padding: 19px 18px 19px 18px;
 }
-#mcswap-items{
+.mcswap-items{
     border: 1px solid #000;
+    border-bottom: 0;
+    display: none;
 }
-#mcswap-listings ul.mcswap-item{
+
+.mcswap-init{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu";
+    text-align: center;
+    width: 100%;
+    height: 248px;
+    line-height: 247px;
+    font-size: 18px;
+    font-weight: bold;
+    animation: message-blinker 1.5s linear infinite;
+}
+
+.mcswap-listings ul.mcswap-item{
     padding: 20px 19px 20px 19px;
     margin: 0;
     list-style-type: none;
@@ -598,35 +736,43 @@ button.mcswap-clear-button:hover{
     border-bottom: 1px solid #000;
     transition: 0.3s;
 }
-#mcswap-listings ul.mcswap-item:hover{
+.mcswap-listings .mcswap-item-format{
+    display: block;
+    position: absolute;
+    margin: 11px 0 0 11px;
+    padding: 7px 11px 7px 11px;
+    font-size: 10px;
+    font-weight: bold;
+    background: #111111b5;
+    color: #fff;
+    border-radius: 18px;
+}
+.mcswap-listings ul.mcswap-item:hover{
     -webkit-box-shadow: inset 0px 0px 3px 0px #154ab3;
     -moz-box-shadow: inset 0px 0px 3px 0px #154ab3;
     box-shadow: inset 0px 0px 3px 0px #154ab3;
 }
-#mcswap-listings ul.mcswap-item.active{
-    -webkit-box-shadow: inset 0px 0px 3px 0px rgb(255, 255, 255);
-    -moz-box-shadow: inset 0px 0px 3px 0px rgb(255, 255, 255);
-    box-shadow: inset 0px 0px 3px 0px rgb(255, 255, 255);
+.mcswap-listings ul.mcswap-item.active{
+    -webkit-box-shadow: inset 0px 0px 14px 0px #fff;
+    -moz-box-shadow: inset 0px 0px 14px 0px #fff;
+    box-shadow: inset 0px 0px 14px 0px #fff;
 }
-#mcswap-listings ul.mcswap-item.active:hover{
-    -webkit-box-shadow: inset 0px 0px 3px 0px rgb(255, 255, 255);
-    -moz-box-shadow: inset 0px 0px 3px 0px rgb(255, 255, 255);
-    box-shadow: inset 0px 0px 3px 0px rgb(255, 255, 255);
+.mcswap-listings ul.mcswap-item.active:hover{
+    -webkit-box-shadow: inset 0px 0px 3px 0px #fff;
+    -moz-box-shadow: inset 0px 0px 3px 0px #fff;
+    box-shadow: inset 0px 0px 3px 0px #fff;
 }
-#mcswap-listings ul.mcswap-item:last-of-type{
-    border-bottom: 1px solid #222;
-}
-#mcswap-listings ul.mcswap-item li{
+.mcswap-listings ul.mcswap-item li{
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
-#mcswap-listings ul.mcswap-item li.mcswap-image{
+.mcswap-listings ul.mcswap-item li.mcswap-image{
     display: inline-block;
     border: 1px solid #000;
     border-radius: 10px;
 }
-#mcswap-listings ul.mcswap-item li img.mcswap-img{
+.mcswap-listings ul.mcswap-item li img.mcswap-img{
     margin: 0;
     padding: 0;
     vertical-align: top;
@@ -637,14 +783,14 @@ button.mcswap-clear-button:hover{
     width: 200px;
     height: 200px;
 }
-#mcswap-listings ul.mcswap-item li.mcswap-details{
+.mcswap-listings ul.mcswap-item li.mcswap-details{
     display: inline-block;
     height: 200px;
     vertical-align: top;
     width: calc(100% - 204px);
     overflow: hidden;
 }
-#mcswap-listings ul.mcswap-item .mcswap-details-name{
+.mcswap-listings ul.mcswap-item .mcswap-details-name{
     padding: 5px 0 0 20px;
     font-size: 21px;
     font-weight: bold;
@@ -662,6 +808,7 @@ button.mcswap-clear-button:hover{
     color: #565656;
     font-size: 12px;
     font-weight: bold;
+    margin-left: 3px;
 }
 .mcswap-details-buy, .mcswap-details-delist{
     display: inline-block;
@@ -685,11 +832,11 @@ button.mcswap-clear-button:hover{
 }
 .mcswap-details-delist{
     display: none;
-    width: 66px;
+    width: 90px;
 }
 .mcswap-details-buy{
     margin-left: 20px;
-    margin-right: 17px;
+    margin-right: 15px;
     width: 120px;
 }
 .mcswap-details-buy:disabled, .mcswap-details-delist:disabled{
@@ -852,7 +999,7 @@ button#mcswap-preview-collection-value:hover{
     box-shadow: 0 0 10px 3px #154ab3;
 }
 
-#token-currency, #sol-currency{
+.mcswap-wrapper .token-currency, .mcswap-wrapper .sol-currency{
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
@@ -860,16 +1007,16 @@ button#mcswap-preview-collection-value:hover{
     margin-left: 10px;
     color: #154ab3;
 }
-#token-currency{
+.mcswap-wrapper .token-currency{
     color: #154ab3;
     text-shadow: 0 0 12px #1141a1;
 }
-#sol-currency{
+.mcswap-wrapper .sol-currency{
     color: #5310a4;
     text-shadow: 0 0 12px #420988;
 }
 
-#create-priority{
+.mcswap-wrapper .create-priority{
     color: #000;
     vertical-align: top;
     cursor: pointer;
@@ -878,8 +1025,7 @@ button#mcswap-preview-collection-value:hover{
     border-radius: 10px;
     width: auto;
     height: 40px;
-    margin-top: 3px;
-    margin-left: 0;
+    margin-left: 33px;
     padding: 0 15px;
     font-weight: bold;
     line-height: 40px;
@@ -887,9 +1033,7 @@ button#mcswap-preview-collection-value:hover{
     display: inline-block;
 }
 
-
-
-#mcswap-create-fees{
+.mcswap-create-fees{
     background: none;
     color: #565656;
     font-size: 12px;
@@ -900,44 +1044,74 @@ button#mcswap-preview-collection-value:hover{
     text-align: right;
     font-weight: bold;
 }
-#mcswap-create-fees-value{
+.mcswap-create-fees-value{
     text-align: right;
     margin-left: 16px;
     color: #fff;
 }
 
-@media only screen and (min-width: 1200px) {
-    #mcswap-listings ul.mcswap-item{
+.mcswap-save-noti{
+    animation: message-blinker 1.5s linear infinite;
+}
+
+@media only screen and (min-width: 1100px) {
+    .mcswap-listings ul.mcswap-item{
         display: inline-block;
         width: calc(50% - 40px);
     }
-    #mcswap-listings ul.mcswap-item:nth-of-type(even){
+    .mcswap-listings ul.mcswap-item:nth-of-type(even){
         border-left: 1px solid #000;
     }
-    #mcswap-listings ul.mcswap-item:nth-last-child(2){
+    /* .mcswap-listings ul.mcswap-item:nth-last-child(2){
         border-bottom: 1px solid #222;
+    } */
+}
+
+@media only screen and (max-width: 1175px) {
+    .mcswap-controls ul.control-ul li.control-li-list,
+    .mcswap-controls ul.control-ul li.control-li-preferences,
+    .mcswap-controls ul.control-ul li.control-li-collections,
+    .mcswap-controls ul.control-ul li.control-li-sellers{
+        display: block;
+        width: auto;
+        height: auto;
+        border-right: 0;
+        border-left: 0;
+    }
+    .mcswap-controls ul.control-ul li.control-li-list{
+        border-top: 1px solid #222;
+    }
+}
+@media only screen and (max-width: 633px) {
+    li.control-li-list input.mint-address{
+        display: block;
+        margin-bottom: 15px;
+    }
+    li.control-li-list button.mcswap-list-it,
+    li.control-li-list button.mcswap-list-cancel{
+        margin: 0 auto;
     }
 }
 
-@media only screen and (min-width: 1500px) {
-    #mcswap-listings ul.mcswap-item{
+@media only screen and (min-width: 1580px) {
+    .mcswap-listings ul.mcswap-item{
         display: inline-block;
         width: calc(33.333% - 40px);
         border-left: 1px solid #222;
         border-right: 1px solid #000;
     }
-    #mcswap-listings ul.mcswap-item:nth-of-type(even){
+    .mcswap-listings ul.mcswap-item:nth-of-type(even){
         border-left: 1px solid #222;
     }
-    #mcswap-listings ul.mcswap-item:nth-last-child(2){
+    /* .mcswap-listings ul.mcswap-item:nth-last-child(2){
         border-left: 1px solid #222;
-    }
-    #mcswap-listings ul.mcswap-item:nth-child(3n){
+    } */
+    .mcswap-listings ul.mcswap-item:nth-child(3n){
         border-right: 1px solid #222;
     }
-    #mcswap-listings ul.mcswap-item:nth-last-child(3){
+    /* .mcswap-listings ul.mcswap-item:nth-last-child(3){
         border-bottom: 1px solid #222;
-    }
+    } */
     /* #mcswap-listings ul.mcswap-item:nth-of-type(even){
         border-left: 1px solid #000;
     }
@@ -947,25 +1121,75 @@ button#mcswap-preview-collection-value:hover{
 }
 
 @media only screen and (max-width: 633px) {
-    #mcswap-listings ul.mcswap-item li.mcswap-image{
+    .mcswap-listings ul.mcswap-item li.mcswap-image{
         width: 60%;
     }
-    #mcswap-listings ul.mcswap-item li.mcswap-image img{
+    .mcswap-listings ul.mcswap-item li.mcswap-image img{
         display: block;
         width: 100%;
         height: auto;
     }
-    #mcswap-listings ul.mcswap-item li.mcswap-details{
+    .mcswap-listings ul.mcswap-item li.mcswap-details{
         display: block;
         width: 100%;
         margin-top: 10px;
     }
-
-
-    /* #mcswap-listings ul.mcswap-item:nth-of-type(even){
-        border-left: 1px solid #000;
+    .mcswap-header ul li.mcswap-name .mcswap-name-span{
+        font-size: 20px;
     }
-    #mcswap-listings ul.mcswap-item:nth-last-child(2){
-        border-bottom: 1px solid #222;
-    } */
+    .mcswap-header ul li.mcswap-name .mcswap-host{
+        margin-top: -9px;
+    }
+    .mcswap-header ul li.mcswap-settings img.mcswap-settings-button,
+    .mcswap-header ul li.mcswap-refresh img.mcswap-refresh-button{
+        width: 32px;
+        height: 32px;
+    }
+    .mcswap-header ul li.mcswap-settings img.mcswap-settings-button{
+        margin: 30px 0 0 32px;
+    }
+    .mcswap-header ul li.mcswap-refresh img.mcswap-refresh-button{
+        margin: 30px 0 0 17px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .mcswap-header ul li.mcswap-name .mcswap-name-span{
+        font-size: 15px;
+        margin-top: 1px;
+    }
+    .mcswap-header ul li.mcswap-name .mcswap-host{
+        margin-top: -13px;
+    }
+    li.control-li-list input.mint-address,
+    li.control-li-list input.token-address{
+        display: block;
+        width: calc(100% - 29px);
+    }
+    li.control-li-list input.token-amount,
+    li.control-li-list input.sol-amount{
+        width: calc(60% - 5px);
+    }
+    li.control-li-list button.mcswap-create-it{
+        margin-bottom: 45px;
+    }
+}
+
+@keyframes message-blinker {
+    50% {
+        opacity: 0.25;
+   }
+}
+
+@keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
 }
