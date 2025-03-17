@@ -20,7 +20,7 @@ npm i mcswap-shop
 import shop from "mcswap-shop";
 import "mcswap-shop/src/colors/green-shop.css";
 (async()=>{
-  const myshop = new shop(process.env.RPC,["phantom","solflare","backpack"]);
+  const myshop = new shop(process.env.RPC);
   myshop.init({
     id: "my-market",
     name: "McSwap Shop",
