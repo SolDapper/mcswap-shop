@@ -80,4 +80,4 @@ import "mcswap-shop/src/colors/green-shop.css";
 ```
 
 ## notes
-assuming you're using a wallet connector other than mcswap-connector, be sure to set window.mcswap = provider / window.mcswap = false when a wallet connects / disconnects.
+assuming you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector), be sure to set window.mcswap = provider / window.mcswap = false when a wallet connects / disconnects.
