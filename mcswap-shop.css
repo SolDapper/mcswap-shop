@@ -1,16 +1,31 @@
+.toastify{
+    font-size: 14px;
+}
+.blur-wrapper{
+    position: absolute;
+    float: left;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
 .mcswap-wrapper{
     border-radius: 10px;
-    border: 1px solid #000;
-    background: #111;
+    /* border: 1px solid #000; */
     font-family: "Ubuntu";
 }
+.mcswap-wrapper-light{
+    color: #111;
+}
+.mcswap-wrapper-dark{
+    color: #fff;
+}
 #mcswap-cover{
+    background: #000000b6;
     display: none;
     position: fixed;
     float: left;
     top: 0;
     left: 0;
-    background: #000000b6;
     height: 100%;
     width: 100%;
     z-index: 5000;
@@ -18,13 +33,13 @@
     padding: 0;
 }
 #mcswap-cover-close{
-    width: 33px;
-    height: 33px;
+    width: 30px;
+    height: 30px;
     display: none;
     position: absolute;
     float: right;
-    top: 15px;
-    right: 15px;
+    top: 16px;
+    right: 16px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -70,15 +85,13 @@
 .mcswap-wrapper button:disabled:hover{
     background: #154ab3;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
     text-shadow: none;
     box-shadow: none;
 }
 
 .mcswap-header{
-    border-radius: 10px 10px 0 0;
-    border: 1px solid #222;
-    border-bottom: 1px solid #000;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #222;
     height: 90px;
     margin: 0;
     padding: 0;
@@ -105,10 +118,9 @@
     display: block;
     padding: 0;
     margin: 15px 0 0 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 6px;
-    border: 1px solid #1f1f1f;
+    width: 62px;
+    height: 62px;
+    border-radius: 8px;
     cursor: pointer;
 }
 .mcswap-header ul li.mcswap-name{
@@ -119,7 +131,7 @@
 
 .mcswap-header ul li.mcswap-name .mcswap-name-span{
     display: block;
-    line-height: 68px;
+    line-height: 70px;
     height: 67px;
 }
 
@@ -130,6 +142,8 @@
     margin-top: -7px;
     margin-left: 2px;
     line-height: 100%;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
 
 .mcswap-header ul li.mcswap-settings{
@@ -187,7 +201,7 @@
 
 .mcswap-controls{
     border-radius: 0 0 10px 10px;
-    border: 1px solid #222;
+    border-top: 1px solid #0a0a0a;
     margin: 0;
     padding: 0;
     display: none;
@@ -205,10 +219,10 @@
 }
 .mcswap-controls ul.control-ul li.control-li-list{
     padding: 15px 15px 15px 15px;
-    width: calc(50% - 50.5px);
+    width: calc(50% - 12px);
     border-left: 1px solid #222;
     border-bottom: 1px solid #000;
-    min-height: 352px;
+    min-height: 354px;
     display: inline-block;
     vertical-align: top;
 }
@@ -238,16 +252,15 @@ li.control-li-list input.mint-address:disabled{
 li.control-li-list button.mcswap-list-it{
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
     background: #154ab3;
     border: 0;
     border-radius: 20px;
     outline: none;
-    height: 40px;
-    line-height: 40px;
+    max-height: 41px;
     width: 100px;
     margin: 0 0 0 12px;
-    padding: 0;
+    padding: 13px 0 14px 0;
     font-weight: bold;
     transition: all .3s;
     display: inline-block;
@@ -266,7 +279,6 @@ li.control-li-list button.mcswap-list-it:disabled{
 li.control-li-list button.mcswap-list-it:disabled:hover{
     background: #154ab3;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
     text-shadow: none;
     box-shadow: none;
 }
@@ -277,7 +289,7 @@ li.control-li-list button.mcswap-list-cancel{
     display: none;
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 1px 1px #111;
+    text-shadow: none;
     background: #154ab3;
     border: 0;
     border-radius: 20px;
@@ -304,7 +316,6 @@ li.control-li-list button.mcswap-list-cancel:disabled{
 li.control-li-list button.mcswap-list-cancel:disabled:hover{
     background: #154ab3;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
     text-shadow: none;
     box-shadow: none;
 }
@@ -372,16 +383,15 @@ li.control-li-list input.sol-amount:disabled{
 li.control-li-list button.mcswap-create-it{
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
     background: #154ab3;
     border: 0;
     border-radius: 20px;
     outline: none;
-    height: 40px;
-    line-height: 40px;
+    max-height: 41px;
     width: 132px;
     margin: 30px auto 24px auto;
-    padding: 0;
+    padding: 13px 0 14px 0;
     font-weight: bold;
     transition: all .3s;
     display: block;
@@ -399,7 +409,6 @@ li.control-li-list button.mcswap-create-it:disabled{
 li.control-li-list button.mcswap-create-it:disabled:hover{
     background: #154ab3;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
     text-shadow: none;
     box-shadow: none;
 }
@@ -407,16 +416,15 @@ li.control-li-list button.mcswap-create-it:disabled:hover{
 li.control-li-sellers button.mcswap-update-it{
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
     background: #154ab3;
     border: 0;
     border-radius: 20px;
     outline: none;
-    height: 40px;
-    line-height: 40px;
+    max-height: 41px;
     width: 132px;
     margin: 30px auto 24px auto;
-    padding: 0;
+    padding: 13px 0 14px 0;
     font-weight: bold;
     transition: all .3s;
     display: block;
@@ -434,7 +442,6 @@ li.control-li-sellers button.mcswap-update-it:disabled{
 li.control-li-sellers button.mcswap-update-it:disabled:hover{
     background: #154ab3;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
     text-shadow: none;
     box-shadow: none;
 }
@@ -442,16 +449,15 @@ li.control-li-sellers button.mcswap-update-it:disabled:hover{
 li.control-li-collections button.mcswap-update-collections{
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
     background: #154ab3;
     border: 0;
     border-radius: 20px;
     outline: none;
-    height: 40px;
-    line-height: 40px;
-    width: 160px;
+    max-height: 41px;
+    width: 150px;
     margin: 30px auto 24px auto;
-    padding: 0;
+    padding: 13px 0 14px 0;
     font-weight: bold;
     transition: all .3s;
     display: block;
@@ -469,17 +475,16 @@ li.control-li-collections button.mcswap-update-collections:disabled{
 li.control-li-collections button.mcswap-update-collections:disabled:hover{
     background: #154ab3;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
     text-shadow: none;
     box-shadow: none;
 }
 
 .mcswap-controls ul.control-ul li.control-li-preferences{
     padding: 15px 15px 15px 15px;
-    width: calc(50% - 12px);
+    width: calc(50% - 50.5px);
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
-    min-height: 352px;
+    min-height: 354px;
     display: inline-block;
     vertical-align: top;
 }
@@ -518,20 +523,19 @@ li.control-li-preferences select:disabled{
 li.control-li-preferences button.mcswap-save-settings{
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
     background: #154ab3;
     border: 0;
     border-radius: 20px;
     outline: none;
-    height: 40px;
-    line-height: 40px;
     width: 132px;
     margin: 30px auto 24px auto;
-    padding: 0;
+    padding: 13px 0 14px 0;;
     font-weight: bold;
     transition: all .3s;
     display: block;
     transition: 0.3s;
+    max-height: 41px;
 }
 li.control-li-preferences button.mcswap-save-settings:hover{
     background: #fff;
@@ -545,7 +549,6 @@ li.control-li-preferences button.mcswap-save-settings:disabled{
 li.control-li-preferences button.mcswap-save-settings:disabled:hover{
     background: #154ab3;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
     text-shadow: none;
     box-shadow: none;
 }
@@ -703,14 +706,17 @@ li.control-li-preferences span.mcswap-standard-error{
 
 .mcswap-listings{
     border-radius: 0 0 10px 10px;
-    border: 1px solid #222;
+    /* border: 1px solid #222; */
     margin: 0;
-    padding: 19px 18px 19px 18px;
+    padding: 0;
 }
 .mcswap-items{
-    border: 1px solid #000;
+    border: 1px solid #000000;
+    border-left: 0;
+    border-right: 0;
     border-bottom: 0;
     display: none;
+    overflow: hidden;
 }
 
 .mcswap-init{
@@ -733,8 +739,10 @@ li.control-li-preferences span.mcswap-standard-error{
     margin: 0;
     list-style-type: none;
     border: 1px solid #222;
-    border-bottom: 1px solid #000;
-    transition: 0.3s;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #0a0a0a;
+    transition: 0.5s;
 }
 .mcswap-listings .mcswap-item-format{
     display: block;
@@ -805,7 +813,7 @@ li.control-li-preferences span.mcswap-standard-error{
     overflow: hidden;
 }
 .mcswap-details-symbol{
-    color: #565656;
+    color: #676767;
     font-size: 12px;
     font-weight: bold;
     margin-left: 3px;
@@ -823,7 +831,7 @@ li.control-li-preferences span.mcswap-standard-error{
     font-weight: bold;
     margin: 19px 0 0 0;
     transition: 0.3s;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: none;
 }
 .mcswap-details-buy:hover, .mcswap-details-delist:hover{
     background: #fff;
@@ -979,7 +987,7 @@ button#mcswap-preview-collection-value:hover{
     font-weight: bold;
     margin: 19px 0 0 0;
     transition: 0.3s;
-    text-shadow: 1px 1px 1px #111;
+    text-shadow: none;
     vertical-align: top;
     width: 142px;
 }
@@ -1035,7 +1043,6 @@ button#mcswap-preview-collection-value:hover{
 
 .mcswap-create-fees{
     background: none;
-    color: #565656;
     font-size: 12px;
     width: 200px;
     float: right;
@@ -1044,27 +1051,16 @@ button#mcswap-preview-collection-value:hover{
     text-align: right;
     font-weight: bold;
 }
+.mcswap-create-fees-label{
+    color: #676767;
+}
 .mcswap-create-fees-value{
     text-align: right;
     margin-left: 16px;
-    color: #fff;
 }
 
 .mcswap-save-noti{
     animation: message-blinker 1.5s linear infinite;
-}
-
-@media only screen and (min-width: 1100px) {
-    .mcswap-listings ul.mcswap-item{
-        display: inline-block;
-        width: calc(50% - 40px);
-    }
-    .mcswap-listings ul.mcswap-item:nth-of-type(even){
-        border-left: 1px solid #000;
-    }
-    /* .mcswap-listings ul.mcswap-item:nth-last-child(2){
-        border-bottom: 1px solid #222;
-    } */
 }
 
 @media only screen and (max-width: 1175px) {
@@ -1082,6 +1078,30 @@ button#mcswap-preview-collection-value:hover{
         border-top: 1px solid #222;
     }
 }
+
+@media only screen and (min-width: 1100px) {
+    .mcswap-listings ul.mcswap-item{
+        display: inline-block;
+        width: calc(50% - 39px);
+    }
+    .mcswap-listings ul.mcswap-item:nth-of-type(even){
+        border-left: 1px solid #000;
+    }
+    .mcswap-listings ul.mcswap-item:nth-child(odd){
+        border-left: 0;
+        border-right: 1px solid #000;
+    }
+    .mcswap-listings ul.mcswap-item:nth-child(even){
+        border-right: 0;
+        border-left: 1px solid #222;
+    }
+
+    /* .mcswap-listings ul.mcswap-item:nth-last-child(2){
+
+        border-bottom: 1px solid #222;
+    } */
+}
+
 @media only screen and (max-width: 633px) {
     li.control-li-list input.mint-address{
         display: block;
@@ -1096,19 +1116,30 @@ button#mcswap-preview-collection-value:hover{
 @media only screen and (min-width: 1580px) {
     .mcswap-listings ul.mcswap-item{
         display: inline-block;
-        width: calc(33.333% - 40px);
+        width: calc(33.33% - 39.5px);
         border-left: 1px solid #222;
         border-right: 1px solid #000;
     }
-    .mcswap-listings ul.mcswap-item:nth-of-type(even){
-        border-left: 1px solid #222;
-    }
-    /* .mcswap-listings ul.mcswap-item:nth-last-child(2){
+    /* .mcswap-listings ul.mcswap-item:nth-of-type(even){
         border-left: 1px solid #222;
     } */
-    .mcswap-listings ul.mcswap-item:nth-child(3n){
-        border-right: 1px solid #222;
+    .mcswap-listings ul.mcswap-item{
+        border: 1px solid #222;
+        border-bottom: 1px solid #000;
     }
+    .mcswap-listings ul.mcswap-item:nth-child(3n+1){
+        border-left: 0;
+        border-right: 1px solid #000;
+    }
+    .mcswap-listings ul.mcswap-item:nth-child(3n+2){
+        border-left: 1px solid #222;
+        border-right: 1px solid #000;
+    }
+    .mcswap-listings ul.mcswap-item:nth-child(3n+3){
+        border-left: 1px solid #222;
+        border-right: 0;
+    }
+
     /* .mcswap-listings ul.mcswap-item:nth-last-child(3){
         border-bottom: 1px solid #222;
     } */
@@ -1131,8 +1162,9 @@ button#mcswap-preview-collection-value:hover{
     }
     .mcswap-listings ul.mcswap-item li.mcswap-details{
         display: block;
-        width: 100%;
+        width: calc(100% + 12px);
         margin-top: 10px;
+        margin-left: -12px;
     }
     .mcswap-header ul li.mcswap-name .mcswap-name-span{
         font-size: 20px;
@@ -1153,10 +1185,19 @@ button#mcswap-preview-collection-value:hover{
     }
 }
 
+@media only screen and (max-width: 520px) {
+    #mcswap-lightbox {
+        top: 22%;
+        left: 2.5%;
+        width: 95%;
+        height: auto;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .mcswap-header ul li.mcswap-name .mcswap-name-span{
         font-size: 15px;
-        margin-top: 1px;
+        margin-top: -1px;
     }
     .mcswap-header ul li.mcswap-name .mcswap-host{
         margin-top: -13px;

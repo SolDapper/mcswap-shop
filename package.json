@@ -5,6 +5,7 @@
   "main": "mcswap-shop.js",
   "type": "module",
   "keywords": [
+    "solana",
     "nft",
     "marketplace"
   ],
