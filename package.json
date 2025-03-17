@@ -2,12 +2,14 @@
   "name": "mcswap-shop",
   "version": "0.0.1-dev",
   "description": "The McSwap Shop Module",
-  "main": "mcswap-shop.js",
+  "main": "src/mcswap-shop.js",
   "type": "module",
   "keywords": [
     "solana",
     "nft",
-    "marketplace"
+    "marketplace",
+    "trustless",
+    "decentralized"
   ],
   "author": "@SolDapper",
   "license": "MIT",

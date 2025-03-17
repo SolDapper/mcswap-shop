@@ -1,13 +1,12 @@
 // name: mcswap-shop.js
 // author: @SolDapper
 'use strict';
-import "./mcswap-shop.css";
+import "./colors/mcswap-shop.css";
 import $ from "jquery";
 import "@fontsource/ubuntu";
 import Toastify from 'toastify-js';
 import "toastify-js/src/toastify.css";
 import mcswap from "mcswap-sdk"; 
-import mcswapConnector from "./mcswap-connector.js";
 class shop {
     constructor(rpc=false,wallets=[]){
         this.rpc = rpc;

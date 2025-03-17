@@ -1,0 +1,85 @@
+.mcswap-header ul li.mcswap-name .mcswap-host {
+    color: #b8470d;
+}
+.mcswap-listings ul.mcswap-item:hover{
+    -webkit-box-shadow: inset 0px 0px 3px 0px #b8470d;
+    -moz-box-shadow: inset 0px 0px 3px 0px #b8470d;
+    box-shadow: inset 0px 0px 3px 0px #b8470d;
+}
+.mcswap-details-link a{
+    color: #b8470d;
+}
+.mcswap-details-buy, .mcswap-details-delist {
+    background: #b8470d;
+}
+.mcswap-wrapper button:hover{
+    text-shadow: 0 0 20px #b8470d;
+    box-shadow: 0 0 10px 3px #b8470d;
+}
+.mcswap-wrapper button:disabled:hover{
+    background: #b8470d;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+.mcswap-wrapper button.mcswap-clear-button{
+    color: #b8470d;
+}
+li.control-li-preferences button.mcswap-save-settings{
+    background: #b8470d;
+}
+li.control-li-preferences button.mcswap-save-settings:disabled:hover{
+    background: #b8470d;
+}
+li.control-li-list button.mcswap-list-it {
+    background: #b8470d;
+}
+li.control-li-list button.mcswap-list-it:disabled:hover{
+    background: #b8470d;
+}
+li.control-li-sellers button.mcswap-update-it{
+    background: #b8470d;
+}
+li.control-li-sellers button.mcswap-update-it:disabled:hover{
+    background: #b8470d;
+}
+li.control-li-list button.mcswap-create-it {
+    background: #b8470d;
+}
+li.control-li-list button.mcswap-create-it:disabled:hover{
+    background: #b8470d;
+}
+li.control-li-collections button.mcswap-update-collections{
+    background: #b8470d;
+}
+li.control-li-collections button.mcswap-update-collections:disabled:hover{
+    background: #b8470d;
+}
+.mcswap-wrapper .token-currency {
+    color: #b8470d;
+    text-shadow: 0 0 12px #b8470d;
+}
+.mcswap-poweredby a {
+    color: #b8470d;
+}
+#mcswap-preview-next {
+    background: #b8470d;
+}
+#mcswap-preview-next:hover{
+    box-shadow: 0 0 10px 3px #b8470d;
+}
+li.control-li-list button.mcswap-list-cancel {
+    background: #b8470d;
+}
+li.control-li-list button.mcswap-list-cancel:disabled:hover{
+    background: #b8470d;
+}
+button#mcswap-preview-collection-value {
+    color: #b8470d;
+}
+li.control-li-preferences select:hover {
+    box-shadow: 0 0 10px 3px #b8470d;
+}
+#intro .intros {
+    text-shadow: 0 0 18px #b8470d;
+}
