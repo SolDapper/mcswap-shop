@@ -729,39 +729,45 @@ class shop {
         // localStorage.clear();
         const result = {};
 
-        if(_data_&&typeof _data_.id!="undefined"&&_data_.id!=false){this.id=_data_.id;}else{return}
-        if(_data_&&typeof _data_.name!="undefined"&&_data_.name!=false){this.name=_data_.name;}else{this.name="McSwap Shop";}
-        if(_data_&&typeof _data_.logo!="undefined"&&_data_.logo!=false){this.logo=_data_.logo;}else{this.logo=false;}
-        if(_data_&&typeof _data_.logo_link!="undefined"&&_data_.logo_link!=false){this.logo_link=_data_.logo_link;}else{this.logo_link="#";}
-        if(_data_&&typeof _data_.priority!="undefined"&&_data_.priority!=false){this.priority=_data_.priority;}else{this.priority="Low";}
-        if(_data_&&typeof _data_.text_intro!="undefined"&&_data_.text_intro!=false){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Market";}
-        if(_data_&&typeof _data_.text_buy!="undefined"&&_data_.text_buy!=false){this.text_buy=_data_.text_buy;}else{this.text_buy="Buy Now";}
+        if(_data_&&_data_.id){this.id=_data_.id;}else{return}
+        if(_data_&&_data_.name){this.name=_data_.name;}else{this.name="McSwap Shop";}
+        if(_data_&&_data_.logo){this.logo=_data_.logo;}else{this.logo=false;}
+        if(_data_&&_data_.logo_link){this.logo_link=_data_.logo_link;}else{this.logo_link="#";}
+        if(_data_&&_data_.priority){this.priority=_data_.priority;}else{this.priority="Low";}
+        if(_data_&&_data_.default_sort){this.default_sort=_data_.default_sort;}else{this.default_sort="Newest First";}
+        if(_data_&&_data_.default_display){this.default_display=_data_.default_display;}else{this.default_display="All Listings";}
+        if(_data_&&_data_.text_intro){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Market";}
+        if(_data_&&_data_.text_buy){this.text_buy=_data_.text_buy;}else{this.text_buy="Buy Now";}
 
-        if(_data_&&typeof _data_.treasury!="undefined"&&_data_.treasury!=false){this.treasury=_data_.treasury;}else{this.treasury=false;}
-        if(_data_&&typeof _data_.fee_create!="undefined"&&_data_.fee_create>0){this.fee_create=_data_.fee_create;}else{this.fee_create=0;}
-        if(_data_&&typeof _data_.fee_execute!="undefined"&&_data_.fee_execute>0){this.fee_execute=_data_.fee_execute;}else{this.fee_execute=0;}
-        if(_data_&&typeof _data_.default_priority!="undefined"&&_data_.default_priority!=false){this.default_priority=_data_.default_priority;}else{this.default_priority="Low";}
-        if(_data_&&typeof _data_.default_sort!="undefined"&&_data_.default_sort!=false){this.default_sort=_data_.default_sort;}
-        if(_data_&&typeof _data_.default_display!="undefined"&&_data_.default_display!=false){this.default_display=_data_.default_display;}
-        if(_data_&&typeof _data_.enable_new_listings!="undefined"){this.enable_new_listings=_data_.enable_new_listings;}
-        if(_data_&&typeof _data_.enable_edit_sort!="undefined"){this.enable_edit_sort=_data_.enable_edit_sort;}
-        if(_data_&&typeof _data_.enable_edit_display!="undefined"){this.enable_edit_display=_data_.enable_edit_display;}
-        if(_data_&&typeof _data_.enable_edit_core!="undefined"){this.enable_edit_core=_data_.enable_edit_core;}
-        if(_data_&&typeof _data_.core_display!="undefined"){this.core_display=_data_.core_display;}
-        if(_data_&&typeof _data_.enable_edit_nft!="undefined"){this.enable_edit_nft=_data_.enable_edit_nft;}
-        if(_data_&&typeof _data_.nft_display!="undefined"){this.nft_display=_data_.nft_display;}
-        if(_data_&&typeof _data_.enable_edit_pnft!="undefined"){this.enable_edit_pnft=_data_.enable_edit_pnft;}
-        if(_data_&&typeof _data_.pnft_display!="undefined"){this.pnft_display=_data_.pnft_display;}
-        if(_data_&&typeof _data_.enable_edit_cnft!="undefined"){this.enable_edit_cnft=_data_.enable_edit_cnft;}
-        if(_data_&&typeof _data_.cnft_display!="undefined"){this.cnft_display=_data_.cnft_display;}
-        if(_data_&&typeof _data_.collections!="undefined"&&_data_.collections!=false){this.collections=_data_.collections;}else{this.collections="";}
-        if(_data_&&typeof _data_.sellers!="undefined"&&_data_.sellers!=false){this.sellers=_data_.sellers;}else{this.sellers="";}
-        if(_data_&&typeof _data_.enable_edit_sellers!="undefined"){this.enable_edit_sellers=_data_.enable_edit_sellers;}
-        if(_data_&&typeof _data_.enable_edit_collections!="undefined"){this.enable_edit_collections=_data_.enable_edit_collections;}
-        if(_data_&&typeof _data_.master_settings!="undefined"&&_data_.master_settings!=false){this.master_settings=_data_.master_settings;}else{this.master_settings=false;}
-        if(_data_&&typeof _data_.collections_display!="undefined"&&_data_.collections_display!=true){this.collections_display=false;}else{this.collections_display=true;}
-        if(_data_&&typeof _data_.sellers_display!="undefined"&&_data_.sellers_display!=true){this.sellers_display=false;}else{this.sellers_display=true;}
-        if(_data_&&typeof _data_.shop_styler!="undefined"&&_data_.shop_styler!=false){this.shop_styler=_data_.shop_styler;}else{this.shop_styler=false;}
+        if(_data_&&!_data_.master_settings){this.master_settings=_data_.master_settings;}else{this.master_settings=true;}
+        if(_data_&&!_data_.enable_new_listings){this.enable_new_listings=_data_.enable_new_listings;}else{this.enable_new_listings=true;}
+        if(_data_&&!_data_.enable_edit_sort){this.enable_edit_sort=_data_.enable_edit_sort;}else{this.enable_edit_sort=true;}
+        if(_data_&&!_data_.enable_edit_display){this.enable_edit_display=_data_.enable_edit_display;}else{this.enable_edit_display=true;}
+        
+        if(_data_&&_data_.fee_create&&_data_.fee_create>0){this.fee_create=_data_.fee_create;}else{this.fee_create=0;}
+        if(_data_&&_data_.fee_execute&&_data_.fee_execute>0){this.fee_execute=_data_.fee_execute;}else{this.fee_execute=0;}
+        if(_data_&&_data_.treasury){this.treasury=_data_.treasury;}else{this.treasury=false;}
+
+        if(_data_&&!_data_.enable_edit_core){this.enable_edit_core=_data_.enable_edit_core;}else{this.enable_edit_core=true;}
+        if(_data_&&!_data_.enable_edit_nft){this.enable_edit_nft=_data_.enable_edit_nft;}else{this.enable_edit_nft=true;}
+        if(_data_&&!_data_.enable_edit_pnft){this.enable_edit_pnft=_data_.enable_edit_pnft;}else{this.enable_edit_pnft=true;}
+        if(_data_&&!_data_.enable_edit_cnft){this.enable_edit_cnft=_data_.enable_edit_cnft;}else{this.enable_edit_cnft=true;}
+        
+        if(_data_&&!_data_.core_display){this.core_display=_data_.core_display;}else{this.core_display=true;}
+        if(_data_&&!_data_.nft_display){this.nft_display=_data_.nft_display;}else{this.nft_display=true;}
+        if(_data_&&!_data_.pnft_display){this.pnft_display=_data_.pnft_display;}else{this.pnft_display=true;}
+        if(_data_&&!_data_.cnft_display){this.cnft_display=_data_.cnft_display;}else{this.cnft_display=true;}
+
+        if(_data_&&!_data_.collections_display){this.collections_display=false;}else{this.collections_display=true;}
+        if(_data_&&!_data_.enable_edit_collections){this.enable_edit_collections=_data_.enable_edit_collections;}else{this.enable_edit_collections=true;}
+        if(_data_&&_data_.collections){this.collections=_data_.collections;}else{this.collections="";}
+        
+        if(_data_&&!_data_.sellers_display){this.sellers_display=false;}else{this.sellers_display=true;}
+        if(_data_&&!_data_.enable_edit_sellers){this.enable_edit_sellers=_data_.enable_edit_sellers;}else{this.enable_edit_sellers=true;}
+        if(_data_&&_data_.sellers){this.sellers=_data_.sellers;}else{this.sellers="";}
+        
+        if(_data_&&_data_.shop_styler){this.shop_styler=_data_.shop_styler;}else{this.shop_styler=false;}
+
         const default_settings = {
             text_intro: this.text_intro,
             text_buy: this.text_buy,
@@ -775,7 +781,7 @@ class shop {
             enable_edit_collections: this.enable_edit_collections,
             enable_new_listings: this.enable_new_listings,
             treasury: this.treasury,
-            priority: this.default_priority,
+            priority: this.priority,
             fee_create: this.fee_create,
             fee_execute: this.fee_execute,
             enable_edit_sort: this.enable_edit_sort,

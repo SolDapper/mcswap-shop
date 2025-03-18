@@ -30,27 +30,32 @@ myshop.init({
   default_display: "All Listings",
   text_intro: "Initializing Demo",
   text_buy: "Buy Me",
+  master_settings: true,
   enable_new_listings: true,
   enable_edit_sort: true,
   enable_edit_display: true,
-  enable_edit_core: true,
-  core_display: true,
-  enable_edit_nft: true,
-  nft_display: true,
-  enable_edit_pnft: true,
-  pnft_display: true,
-  enable_edit_cnft: true,
-  cnft_display: true,
   fee_create: 0,
   fee_execute: 0,
   treasury: "",
-  collections: "6Gfz6beNCcP8P7vrMyN2AFtsuv8rkVszSJ8xoP4zQyaR,ACy3ZVXcch8mZXUtRVqsJfa2DhFHxnUJpBb4oeN9tZsX,BL8ocmGmaEiM73JYjAAhgAmHPbtuY3CThYem9g4N5PqQ,BTJPWLW7DLQWpm2TNNEByAM5a1E1AGJp4h43czo9YBLc,Cq2BNRoE5RqyqSmACDQLx4ivp3MgmePwd2mdroZ5hmom,H3mnaqNFFNwqRfEiWFsRTgprCvG4tYFfmNezGEVnaMuQ",
-  sellers: "7Z3LJB2rxV4LiRBwgwTcufAWxnFTVJpcoCMiCo8Z5Ere,2jcih7dUFmEQfMUXQQnL2Fkq9zMqj4jwpHqvRVe3gGLL",
-  enable_edit_sellers: true,
-  enable_edit_collections: true,
-  master_settings: true,
+
+  enable_edit_core: true,
+  enable_edit_nft: true,
+  enable_edit_pnft: true,
+  enable_edit_cnft: true,
+  
+  core_display: true,
+  nft_display: true,
+  pnft_display: true,
+  cnft_display: true,
+  
   collections_display: true,
+  enable_edit_collections: true,
+  collections: "6Gfz6beNCcP8P7vrMyN2AFtsuv8rkVszSJ8xoP4zQyaR,ACy3ZVXcch8mZXUtRVqsJfa2DhFHxnUJpBb4oeN9tZsX,BL8ocmGmaEiM73JYjAAhgAmHPbtuY3CThYem9g4N5PqQ,BTJPWLW7DLQWpm2TNNEByAM5a1E1AGJp4h43czo9YBLc,Cq2BNRoE5RqyqSmACDQLx4ivp3MgmePwd2mdroZ5hmom,H3mnaqNFFNwqRfEiWFsRTgprCvG4tYFfmNezGEVnaMuQ",
+
   sellers_display: true,
+  enable_edit_sellers: true,
+  sellers: "7Z3LJB2rxV4LiRBwgwTcufAWxnFTVJpcoCMiCo8Z5Ere,2jcih7dUFmEQfMUXQQnL2Fkq9zMqj4jwpHqvRVe3gGLL",
+
   shop_styler: {
     shop:{
       "background": "#1a1a1a",
@@ -82,45 +87,36 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 
 ## config options
 
-| **Parameter**     |    **Type**     |      **Default**      | **Description**                           |
-| :---------------- |----------------:|:----------------------|:------------------------------------------|
-| id                | string          |  false                |                                           |
-| name              | string          |  McSwap Shop          |                                           |
-| logo              | url             |  false                |                                           |
-| logo_link         | url             |  #                    |                                           |
-| default_priority  | string          |  Low                  |                                           |
-| default_sort      | string          |  Newest First         |                                           |
-| default_display   | string          |  All Listings         |                                           |
-| text_intro        | string          |  Initializing Market  |                                           |
-| text_buy          | string          |  Buy Me               |                                           |
-
-
-
-
-
-| text_buy          | string          |  text_buy    |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-
-
-
-
-
-
+| **Parameter**         |    **Type**     |      **Default**      | **Description**                           |
+| :-----------------------|----------------:|:----------------------|:------------------------------------------|
+| id                      | string          |  false (bool)         |                                           |
+| name                    | string          |  McSwap Shop          |                                           |
+| logo                    | url             |  false (bool)         |                                           |
+| logo_link               | url             |  #                    |                                           |
+| priority                | string          |  Low                  |                                           |
+| default_sort            | string          |  Newest First         |                                           |
+| default_display         | string          |  All Listings         |                                           |
+| text_intro              | string          |  Initializing Market  |                                           |
+| text_buy                | string          |  Buy Me               |                                           |
+| master_settings         | bool            |  true                 |                                           |
+| enable_new_listings     | bool            |  true                 |                                           |
+| enable_edit_sort        | bool            |  true                 |                                           |
+| enable_edit_display     | bool            |  true                 |                                           |
+| fee_create              | float           |  0                    |                                           |
+| fee_execute             | float           |  0                    |                                           |
+| treasury                | string          |  false                |                                           |
+| enable_edit_core        | bool            |  true                 |                                           |
+| enable_edit_nft         | bool            |  true                 |                                           |
+| enable_edit_pnft        | bool            |  true                 |                                           |
+| enable_edit_cnft        | bool            |  true                 |                                           |
+| core_display            | bool            |  true                 |                                           |
+| nft_display             | bool            |  true                 |                                           |
+| pnft_display            | bool            |  true                 |                                           |
+| cnft_display            | bool            |  true                 |                                           |
+| collections_display     | bool            |  true                 |                                           |
+| enable_edit_collections | bool            |  true                 |                                           |
+| collections             | csv             |  ""                   |                                           |
+| sellers_display         | bool            |  true                 |                                           |
+| enable_edit_sellers     | bool            |  true                 |                                           |
+| sellers                 | csv             |  ""                   |                                           |
+| shop_styler             | csv             |  ""                   |                                           |
