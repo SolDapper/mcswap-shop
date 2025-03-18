@@ -23,13 +23,13 @@ const myshop = new shop(process.env.RPC);
 myshop.init({
   id: "my-market",
   name: "McSwap Shop",
-  default_priority: "Low",
-  default_display: "All Listings",
-  default_sort: "Newest First",
-  text_intro: "Initializing Demo",
-  text_buy: "Buy Me",
   logo: "",
   logo_link: "",
+  default_priority: "Low",
+  default_sort: "Newest First",
+  default_display: "All Listings",
+  text_intro: "Initializing Demo",
+  text_buy: "Buy Me",
   enable_new_listings: true,
   enable_edit_sort: true,
   enable_edit_display: true,
@@ -80,5 +80,10 @@ myshop.init({
 ## notes
 if you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector), be sure to set window.mcswap = provider / window.mcswap = false when a wallet connects / disconnects. This allows your shop to update it's display including a "Delist" button on assets listed by the connected wallet.
 
-## parameters
+## config options
 
+| **Parameter** | **Type**      | **Required** | **Default** |
+| :------------ |:------------- |:------------:|:-----------:|
+| id            | string        |   yes        |             |
+| name          | string        |   no         |             |
+| logo          | url string    |   yes        |             |
