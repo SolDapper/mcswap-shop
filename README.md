@@ -37,17 +37,14 @@ myshop.init({
   fee_create: 0,
   fee_execute: 0,
   treasury: "",
-
   enable_edit_core: true,
   enable_edit_nft: true,
   enable_edit_pnft: true,
   enable_edit_cnft: true,
-  
   core_display: true,
   nft_display: true,
   pnft_display: true,
   cnft_display: true,
-  
   collections_display: true,
   enable_edit_collections: true,
   collections: "6Gfz6beNCcP8P7vrMyN2AFtsuv8rkVszSJ8xoP4zQyaR,ACy3ZVXcch8mZXUtRVqsJfa2DhFHxnUJpBb4oeN9tZsX,BL8ocmGmaEiM73JYjAAhgAmHPbtuY3CThYem9g4N5PqQ,BTJPWLW7DLQWpm2TNNEByAM5a1E1AGJp4h43czo9YBLc,Cq2BNRoE5RqyqSmACDQLx4ivp3MgmePwd2mdroZ5hmom,H3mnaqNFFNwqRfEiWFsRTgprCvG4tYFfmNezGEVnaMuQ",
