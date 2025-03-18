@@ -85,9 +85,33 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 | **Parameter**     |    **Type**     | **Required** |   **Default**   | **Description**          |
 | :---------------- |:---------------:|:------------:|:---------------:|:-------------------------|
 | id                | string          |   yes        |  false          |                          |
+|                                                                                                 |
 | name              | string          |   no         |  McSwap Shop    |                          |
 | logo              | url             |   yes        | ./img/logo.png  |                          |
 | logo_link         | url             |   no         |  false          |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_sort      | string          |   no         |  Low            |                          |
+| default_display   | string          |   no         |  Low            |                          |
+| text_intro        | string          |   no         |  Low            |                          |
+| text_buy          | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
+| default_priority  | string          |   no         |  Low            |                          |
 | default_priority  | string          |   no         |  Low            |                          |
 
 

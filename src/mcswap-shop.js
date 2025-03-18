@@ -726,13 +726,16 @@ class shop {
     async init(_data_){
         // localStorage.clear();
         const result = {};
-        if(_data_&&typeof _data_.text_intro!="undefined"&&_data_.text_intro!=false){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Market";}
-        if(_data_&&typeof _data_.text_buy!="undefined"&&_data_.text_buy!=false){this.text_buy=_data_.text_buy;}else{this.text_buy="Buy Now";}
+
         if(_data_&&typeof _data_.id!="undefined"&&_data_.id!=false){this.id=_data_.id;}else{return}
         if(_data_&&typeof _data_.name!="undefined"&&_data_.name!=false){this.name=_data_.name;}else{this.name="McSwap Shop";}
-        if(_data_&&typeof _data_.logo!="undefined"&&_data_.logo!=false){this.logo=_data_.logo;}
-        if(_data_&&typeof _data_.logo_link!="undefined"&&_data_.logo_link!=false){this.logo_link=_data_.logo_link;}
-        if(_data_&&typeof _data_.priority!="undefined"&&_data_.priority!=false){this.priority=_data_.priority;}
+        if(_data_&&typeof _data_.logo!="undefined"&&_data_.logo!=false){this.logo=_data_.logo;}else{this.logo="./img/logo.png";}
+        if(_data_&&typeof _data_.logo_link!="undefined"&&_data_.logo_link!=false){this.logo_link=_data_.logo_link;}else{this.logo_link=false;}
+        if(_data_&&typeof _data_.priority!="undefined"&&_data_.priority!=false){this.priority=_data_.priority;}else{this.priority="Low";}
+
+        if(_data_&&typeof _data_.text_intro!="undefined"&&_data_.text_intro!=false){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Market";}
+        if(_data_&&typeof _data_.text_buy!="undefined"&&_data_.text_buy!=false){this.text_buy=_data_.text_buy;}else{this.text_buy="Buy Now";}
+
         if(_data_&&typeof _data_.treasury!="undefined"&&_data_.treasury!=false){this.treasury=_data_.treasury;}else{this.treasury=false;}
         if(_data_&&typeof _data_.fee_create!="undefined"&&_data_.fee_create>0){this.fee_create=_data_.fee_create;}else{this.fee_create=0;}
         if(_data_&&typeof _data_.fee_execute!="undefined"&&_data_.fee_execute>0){this.fee_execute=_data_.fee_execute;}else{this.fee_execute=0;}
