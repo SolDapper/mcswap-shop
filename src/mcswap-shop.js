@@ -690,6 +690,7 @@ class shop {
         }
     }
     async start(_data_,miliseconds){ 
+
         this.checker = setInterval(async function(){
             const provider = window.mcswap;
             if(provider && provider.isConnected && provider.isConnected === true){
@@ -719,6 +720,7 @@ class shop {
                 $("#"+_data_.id+" .mcswap-details-buy").prop("disabled", false);
             }
         }, miliseconds);
+        
     }
     async stop(){ 
         this.checker = clearInterval(this.checker);
