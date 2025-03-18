@@ -1,7 +1,7 @@
 # mcswap-shop
-this display module will embed a nft storefront into your application
+This module will embed a Solana NFT storefront into an existing application. Listings are powered by the native Solana programs of the McSwap Trustless Escrow Protocol. This module makes use of the [mcswap-sdk](https://github.com/SolDapper/mcswap-sdk) to directly integrate with the protocol.
 
-![powered by solana](https://repository-images.githubusercontent.com/944741416/d30f1c19-99a5-479f-ab66-ba9ab5d4c6e5)
+![mcswap shop](https://repository-images.githubusercontent.com/944741416/d30f1c19-99a5-479f-ab66-ba9ab5d4c6e5)
 
 ![powered by solana](http://mcswap.xyz/gh/stacked-color.svg)
 
@@ -78,4 +78,7 @@ myshop.init({
 ```
 
 ## notes
-assuming you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector), be sure to set window.mcswap = provider / window.mcswap = false when a wallet connects / disconnects.
+if you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector), be sure to set window.mcswap = provider / window.mcswap = false when a wallet connects / disconnects. This allows your shop to update it's display including a "Delist" button on assets listed by the connected wallet.
+
+## parameters
+
