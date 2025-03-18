@@ -82,8 +82,8 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 
 ## config options
 
-| **Parameter** | **Type**      | **Required** | **Default** |
-| :------------ |:------------- |:------------:|:-----------:|
-| id            | string        |   yes        |             |
-| name          | string        |   no         |             |
-| logo          | url string    |   yes        |             |
+| **Parameter** |   **Type**    | **Required** | **Default** | **Description**          |
+| :------------ |:-------------:|:------------:|:-----------:|:-------------------------|
+| id            | string        |   yes        |             |                          |
+| name          | string        |   no         |             |                          |
+| logo          | url           |   yes        |             |                          |
