@@ -82,23 +82,23 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 
 ## config options
 
-| **Parameter**     |    **Type**     | **Required** |   **Default**   | **Description**          |
-| :---------------- |:---------------:|:------------:|:---------------:|:-------------------------|
-| id                | string          |   yes        |  false          |                          |
-| name              | string          |   no         |  McSwap Shop    |                          |
-| logo              | url             |   yes        | ./img/logo.png  |                          |
-| logo_link         | url             |   no         |  false          |                          |
-| default_priority  | string          |   no         |  Low            |                          |
-| default_sort      | string          |   no         |  Newest First   |                          |
-| default_display   | string          |   no         |  All Listings   |                          |
+| **Parameter**     |    **Type**     |      **Default**      | **Description**                           |
+| :---------------- |:---------------:|:----------------------|:------------------------------------------|
+| id                | string          |  false                |                                           |
+| name              | string          |  McSwap Shop          |                                           |
+| logo              | url             |  false                |                                           |
+| logo_link         | url             |  #                    |                                           |
+| default_priority  | string          |  Low                  |                                           |
+| default_sort      | string          |  Newest First         |                                           |
+| default_display   | string          |  All Listings         |                                           |
+| text_intro        | string          |  Initializing Market  |                                           |
+| text_buy          | string          |  Buy Me               |                                           |
 
 
 
 
 
-
-| text_intro        | string          |   no         |  Low            |                          |
-| text_buy          | string          |   no         |  Low            |                          |
+| text_buy          | string          |  text_buy    |                          |
 | default_priority  | string          |   no         |  Low            |                          |
 | default_priority  | string          |   no         |  Low            |                          |
 | default_priority  | string          |   no         |  Low            |                          |

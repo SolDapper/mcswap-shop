@@ -720,7 +720,7 @@ class shop {
                 $("#"+_data_.id+" .mcswap-details-buy").prop("disabled", false);
             }
         }, miliseconds);
-        
+
     }
     async stop(){ 
         this.checker = clearInterval(this.checker);
@@ -731,10 +731,9 @@ class shop {
 
         if(_data_&&typeof _data_.id!="undefined"&&_data_.id!=false){this.id=_data_.id;}else{return}
         if(_data_&&typeof _data_.name!="undefined"&&_data_.name!=false){this.name=_data_.name;}else{this.name="McSwap Shop";}
-        if(_data_&&typeof _data_.logo!="undefined"&&_data_.logo!=false){this.logo=_data_.logo;}else{this.logo="./img/logo.png";}
-        if(_data_&&typeof _data_.logo_link!="undefined"&&_data_.logo_link!=false){this.logo_link=_data_.logo_link;}else{this.logo_link=false;}
+        if(_data_&&typeof _data_.logo!="undefined"&&_data_.logo!=false){this.logo=_data_.logo;}else{this.logo=false;}
+        if(_data_&&typeof _data_.logo_link!="undefined"&&_data_.logo_link!=false){this.logo_link=_data_.logo_link;}else{this.logo_link="#";}
         if(_data_&&typeof _data_.priority!="undefined"&&_data_.priority!=false){this.priority=_data_.priority;}else{this.priority="Low";}
-
         if(_data_&&typeof _data_.text_intro!="undefined"&&_data_.text_intro!=false){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Market";}
         if(_data_&&typeof _data_.text_buy!="undefined"&&_data_.text_buy!=false){this.text_buy=_data_.text_buy;}else{this.text_buy="Buy Now";}
 
@@ -819,7 +818,9 @@ class shop {
         const wrapper = $(_mcmarket_+" .mcswap-wrapper");
         
         // add header bar
-        let ele = "<div class='mcswap-header'><ul><li class='mcswap-logo'><a target='_blank' class='mcswap-logo-link' href='#'><img src='"+default_settings.logo+"' /></a></li><li class='mcswap-name'><span class='mcswap-name-span'>"+default_settings.name+"</span><span class='mcswap-host'></span></li><li class='mcswap-settings'><img class='mcswap-settings-button' src='"+this.settings+"' /></li><li class='mcswap-refresh'><img class='mcswap-refresh-button' src='"+this.refresh+"' /></li></ul></div>";
+        let hasSrc="";
+        if(default_settings.logo!=false){hasSrc = "src='"+default_settings.logo+"' ";}
+        let ele = "<div class='mcswap-header'><ul><li class='mcswap-logo'><a target='_blank' class='mcswap-logo-link' href='#'><img "+hasSrc+"/></a></li><li class='mcswap-name'><span class='mcswap-name-span'>"+default_settings.name+"</span><span class='mcswap-host'></span></li><li class='mcswap-settings'><img class='mcswap-settings-button' src='"+this.settings+"' /></li><li class='mcswap-refresh'><img class='mcswap-refresh-button' src='"+this.refresh+"' /></li></ul></div>";
         wrapper.append(ele);
 
         $("#"+default_settings.id+" .mcswap-host").html(window.location.host);
