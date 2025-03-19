@@ -78,7 +78,18 @@ myshop.init({
 ```
 
 ## notes
-if you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector), be sure to set window.mcswap = provider / window.mcswap = false when a wallet connects / disconnects. This allows your shop to update it's display including a "Delist" button on assets listed by the connected wallet.
+If you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector), to allow your shop to update it's display to including the "Delist" button on assets listed by the connected wallet, be sure to set:
+```javascript
+window.mcswap = provider; // after your wallet connects
+```
+```javascript
+window.mcswap = false; // after your wallet disconnects
+```
+
+If you're using the mcswap-connector then window.mcswap is already set for you. And you can access the current provider object from any scope:
+```javascript
+const provider = window.mcswap;
+```
 
 ## config options
 
@@ -116,7 +127,7 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 | sellers                 | csv             |  ""                   |                                           |
 | shop_styler             | obj             |  false                |                                           |
 
-### shop_styler object
+### shop_styler
 the styler object lets you add some css to fine tune your shop's color scheme
 ```javascript
   {
