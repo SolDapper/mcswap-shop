@@ -88,7 +88,7 @@ window.mcswap = provider; // after your wallet connects
 window.mcswap = false; // after your wallet disconnects
 ```
 
-If you're using the mcswap-connector then `window.mcswap` is already set for you. And you can access the current provider object from any scope:
+If you're already using the `mcswap-connector` then `window.mcswap` is set for you. And you can also access the current provider object from any scope with:
 ```javascript
 const provider = window.mcswap;
 ```
