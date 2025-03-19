@@ -65,6 +65,7 @@ class shop {
                     if(listings.cnft && listings.cnft.length>0){
                         array = listings.cnft;
                         for(let _i_=0;_i_<array.length;_i_++){
+                            array[_i_].lamports_sort = 1000000000*array[_i_].lamports;
                             array[_i_].token = {symbol:"TOKENS"}
                             array[_i_].standard = set_standard;
                             let response;
@@ -80,6 +81,7 @@ class shop {
                                 array[_i_].collection=false;
                                 if(_asset_&&_asset_.grouping&&_asset_.grouping[0]&&_asset_.grouping[0].group_value){array[_i_].collection=_asset_.grouping[0].group_value;}
                             }
+                            array[_i_].units_sort=0;
                             if(array[_i_].tokenMint!=false){
                                 response = await fetch(rpc,{method:'POST',headers:{"Content-Type":"application/json"},
                                 body:JSON.stringify({"jsonrpc":"2.0","id":"text","method":"getAsset","params":{"id":array[_i_].tokenMint}})}).catch(function(err){});
@@ -87,6 +89,10 @@ class shop {
                                     metadata = await response.json();
                                     _asset_ = metadata.result;
                                     array[_i_].token = _asset_.token_info;
+                                    let dec=1;
+                                    let div=10;
+                                    while(dec<array[_i_].token.decimals){div=div*10;dec++;}
+                                    array[_i_].units_sort = div*array[_i_].units;
                                 }
                             }
                         }
@@ -98,6 +104,7 @@ class shop {
                     if(listings.nft && listings.nft.length>0){
                         array = listings.nft;
                         for(let _i_=0;_i_<array.length;_i_++){
+                            array[_i_].lamports_sort = 1000000000*array[_i_].lamports;
                             array[_i_].token = {symbol:"TOKENS"}
                             array[_i_].standard = set_standard;
                             let response;
@@ -113,6 +120,7 @@ class shop {
                                 array[_i_].collection=false;
                                 if(_asset_&&_asset_.grouping&&_asset_.grouping[0]&&_asset_.grouping[0].group_value){array[_i_].collection=_asset_.grouping[0].group_value;}
                             }
+                            array[_i_].units_sort=0;
                             if(array[_i_].tokenMint!=false){
                                 response = await fetch(rpc,{method:'POST',headers:{"Content-Type":"application/json"},
                                 body:JSON.stringify({"jsonrpc":"2.0","id":"text","method":"getAsset","params":{"id":array[_i_].tokenMint}})}).catch(function(err){});
@@ -120,18 +128,22 @@ class shop {
                                     metadata = await response.json();
                                     _asset_ = metadata.result;
                                     array[_i_].token = _asset_.token_info;
+                                    let dec=1;
+                                    let div=10;
+                                    while(dec<array[_i_].token.decimals){div=div*10;dec++;}
+                                    array[_i_].units_sort = div*array[_i_].units;
                                 }
                             }
                         }
                     }
                     listings.nft = array;
 
-
                     array = [];
                     set_standard = "PNFT";
                     if(listings.pnft && listings.pnft.length>0){
                         array = listings.pnft;
                         for(let _i_=0;_i_<array.length;_i_++){
+                            array[_i_].lamports_sort = 1000000000*array[_i_].lamports;
                             array[_i_].token = {symbol:"TOKENS"}
                             array[_i_].standard = set_standard;
                             let response;
@@ -147,6 +159,7 @@ class shop {
                                 array[_i_].collection=false;
                                 if(_asset_&&_asset_.grouping&&_asset_.grouping[0]&&_asset_.grouping[0].group_value){array[_i_].collection=_asset_.grouping[0].group_value;}
                             }
+                            array[_i_].units_sort=0;
                             if(array[_i_].tokenMint!=false){
                                 response = await fetch(rpc,{method:'POST',headers:{"Content-Type":"application/json"},
                                 body:JSON.stringify({"jsonrpc":"2.0","id":"text","method":"getAsset","params":{"id":array[_i_].tokenMint}})}).catch(function(err){});
@@ -154,6 +167,10 @@ class shop {
                                     metadata = await response.json();
                                     _asset_ = metadata.result;
                                     array[_i_].token = _asset_.token_info;
+                                    let dec=1;
+                                    let div=10;
+                                    while(dec<array[_i_].token.decimals){div=div*10;dec++;}
+                                    array[_i_].units_sort = div*array[_i_].units;
                                 }
                             }
                         }
@@ -165,6 +182,7 @@ class shop {
                     if(listings.core && listings.core.length>0){
                         array = listings.core;
                         for(let _i_=0;_i_<array.length;_i_++){
+                            array[_i_].lamports_sort = 1000000000*array[_i_].lamports;
                             array[_i_].token = {symbol:"TOKENS"}
                             array[_i_].standard = set_standard;
                             let response;
@@ -180,6 +198,7 @@ class shop {
                                 array[_i_].collection=false;
                                 if(_asset_&&_asset_.grouping&&_asset_.grouping[0]&&_asset_.grouping[0].group_value){array[_i_].collection=_asset_.grouping[0].group_value;}
                             }
+                            array[_i_].units_sort=0;
                             if(array[_i_].tokenMint!=false){
                                 response = await fetch(rpc,{method:'POST',headers:{"Content-Type":"application/json"},
                                 body:JSON.stringify({"jsonrpc":"2.0","id":"text","method":"getAsset","params":{"id":array[_i_].tokenMint}})}).catch(function(err){});
@@ -187,6 +206,10 @@ class shop {
                                     metadata = await response.json();
                                     _asset_ = metadata.result;
                                     array[_i_].token = _asset_.token_info;
+                                    let dec=1;
+                                    let div=10;
+                                    while(dec<array[_i_].token.decimals){div=div*10;dec++;}
+                                    array[_i_].units_sort = div*array[_i_].units;
                                 }
                             }
                         }
@@ -206,7 +229,7 @@ class shop {
                 return result;
             }
         }
-        function isMobile() {
+        function isMobile(){
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
         function copy(string){
@@ -250,7 +273,7 @@ class shop {
                 onClick: function(){} // Callback after click
             }).showToast();
         }
-        function shuffler(array) {
+        function shuffler(array){
             let currentIndex = array.length;
             while (currentIndex != 0) {
               let randomIndex = Math.floor(Math.random() * currentIndex);
@@ -259,7 +282,7 @@ class shop {
                 array[randomIndex], array[currentIndex]];
             }
         }
-        async function sorter(array) {
+        async function sorter(array){
             const sorting = $("#"+_data_.id+" .mcswap-sorter").val().trim();
             if(sorting=="Shuffle"){
                 shuffler(array);
@@ -277,16 +300,16 @@ class shop {
                 array.sort((a, b) => {if(b.metadata.name<a.metadata.name){return -1;}if(b.metadata.name>a.metadata.name){return 1;}return 0;});
             }
             else if(sorting=="SOL High > Low"){
-                array.sort((a, b) => {if(b.lamports<a.lamports){return -1;}if(b.lamports>a.lamports){return 1;}return 0;});
+                array.sort((a, b) => {if(b.lamports_sort<a.lamports_sort){return -1;}if(b.lamports_sort>a.lamports_sort){return 1;}return 0;});
             }
             else if(sorting=="SOL Low > High"){
-                array.sort((a, b) => {if(a.lamports<b.lamports){return -1;}if(a.lamports>b.lamports){return 1;}return 0;});
+                array.sort((a, b) => {if(a.lamports_sort<b.lamports_sort){return -1;}if(a.lamports_sort>b.lamports_sort){return 1;}return 0;});
             }
             else if(sorting=="Tokens High > Low"){
-                array.sort((a, b) => {if(b.units<a.units){return -1;}if(b.units>a.units){return 1;}return 0;});
+                array.sort((a, b) => {if(b.units_sort<a.units_sort){return -1;}if(b.units_sort>a.units_sort){return 1;}return 0;});
             }
             else if(sorting=="Tokens Low > High"){
-                array.sort((a, b) => {if(a.units<b.units){return -1;}if(a.units>b.units){return 1;}return 0;});
+                array.sort((a, b) => {if(a.units_sort<b.units_sort){return -1;}if(a.units_sort>b.units_sort){return 1;}return 0;});
             }
         }
         async function displayer(rpc,items,backchecker,firstload){
