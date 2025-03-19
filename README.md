@@ -110,9 +110,9 @@ const provider = window.mcswap;
 | enable_new_listings     | bool            |  true                 |  allow users to create new listings (recommended)  |
 | enable_edit_sort        | bool            |  true                 |  allow users to sort listings (recommended)        |
 | enable_edit_display     | bool            |  true                 |  allow users to filter listings (recommended)      |
-| fee_create              | float           |  0                    |                                           |
-| fee_execute             | float           |  0                    |                                           |
-| treasury                | string          |  false                |                                           |
+| fee_create              | float           |  0                    |  optional sol fee for creating listings here       |
+| fee_execute             | float           |  0                    |  optional sol fee for buying listings here         |
+| treasury                | string          |  false                |  wallet address for optional fee collection        |
 | enable_edit_core        | bool            |  true                 |  allow user to use core asset checkbox             |
 | enable_edit_nft         | bool            |  true                 |  allow user to use nft asset checkbox              |
 | enable_edit_pnft        | bool            |  true                 |  allow user to use pnft asset checkbox             |
@@ -130,7 +130,7 @@ const provider = window.mcswap;
 | shop_styler             | obj             |  false                |  see below                                         |
 
 ### shop_styler
-the styler object lets you add some css to fine tune your shop's color scheme
+The shop_styler object lets you add css to fine tune your shop's color scheme
 ```javascript
   {
     shop:{
