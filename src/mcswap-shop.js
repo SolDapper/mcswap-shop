@@ -757,7 +757,7 @@ class shop {
         if(_data_&&_data_.priority){this.priority=_data_.priority;}else{this.priority="Low";}
         if(_data_&&_data_.default_sort){this.default_sort=_data_.default_sort;}else{this.default_sort="Newest First";}
         if(_data_&&_data_.default_display){this.default_display=_data_.default_display;}else{this.default_display="All Listings";}
-        if(_data_&&_data_.text_intro){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Market";}
+        if(_data_&&_data_.text_intro){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Shop";}
         if(_data_&&_data_.text_buy){this.text_buy=_data_.text_buy;}else{this.text_buy="Buy Now";}
         if(_data_&&!_data_.master_settings){this.master_settings=_data_.master_settings;}else{this.master_settings=true;}
         if(_data_&&!_data_.enable_new_listings){this.enable_new_listings=_data_.enable_new_listings;}else{this.enable_new_listings=true;}

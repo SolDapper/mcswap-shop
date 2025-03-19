@@ -25,7 +25,7 @@ myshop.init({
   name: "McSwap Shop",
   logo: "",
   logo_link: "",
-  default_priority: "Low",
+  priority: "Low",
   default_sort: "Newest First",
   default_display: "All Listings",
   text_intro: "Initializing Demo",
@@ -78,7 +78,9 @@ myshop.init({
 ```
 
 ## notes
-If you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector), to allow your shop to update it's display to including the "Delist" button on assets listed by the connected wallet, be sure to set:
+If you're using a wallet connector other than [mcswap-connector](https://github.com/SolDapper/mcswap-connector)...
+
+To allow your shop to update it's display to include the "Delist" button on assets listed by the connected wallet, and disabling the Buy button for those assets be sure to set:
 ```javascript
 window.mcswap = provider; // after your wallet connects
 ```
@@ -86,7 +88,7 @@ window.mcswap = provider; // after your wallet connects
 window.mcswap = false; // after your wallet disconnects
 ```
 
-If you're using the mcswap-connector then window.mcswap is already set for you. And you can access the current provider object from any scope:
+If you're using the mcswap-connector then `window.mcswap` is already set for you. And you can access the current provider object from any scope:
 ```javascript
 const provider = window.mcswap;
 ```
@@ -94,38 +96,38 @@ const provider = window.mcswap;
 ## config options
 
 | **Parameter**         |    **Type**     |      **Default**      | **Description**                           |
-| :-----------------------|----------------:|:----------------------|:------------------------------------------|
-| id                      | string          |  false                |                                           |
-| name                    | string          |  McSwap Shop          |                                           |
-| logo                    | url             |  false                |                                           |
-| logo_link               | url             |  #                    |                                           |
-| priority                | string          |  Low                  |                                           |
-| default_sort            | string          |  Newest First         |                                           |
-| default_display         | string          |  All Listings         |                                           |
-| text_intro              | string          |  Initializing Market  |                                           |
-| text_buy                | string          |  Buy Me               |                                           |
-| master_settings         | bool            |  true                 |                                           |
-| enable_new_listings     | bool            |  true                 |                                           |
-| enable_edit_sort        | bool            |  true                 |                                           |
-| enable_edit_display     | bool            |  true                 |                                           |
+| :-----------------------|----------------:|:----------------------|:---------------------------------------------------|
+| id                      | string          |  false                |  id of the html element that will be your shop     |
+| name                    | string          |  McSwap Shop          |  the display name for this shop                    |
+| logo                    | url             |  false                |  relative or full path to your logo                |
+| logo_link               | url             |  #                    |  url to open when the logo is clicked              |
+| priority                | string          |  Low                  |  default priority fee level for transactions       |
+| default_sort            | string          |  Newest First         |  default ordering for listings                     |
+| default_display         | string          |  All Listings         |  default listings filter                           |
+| text_intro              | string          |  Initializing Shop    |  displayed when the shop element is loading        |
+| text_buy                | string          |  Buy Me               |  the text of the "Buy Me" buttons for listings     |
+| master_settings         | bool            |  true                 |  show the settings gear icon button (recommended)  |
+| enable_new_listings     | bool            |  true                 |  allow users to create new listings (recommended)  |
+| enable_edit_sort        | bool            |  true                 |  allow users to sort listings (recommended)        |
+| enable_edit_display     | bool            |  true                 |  allow users to filter listings (recommended)      |
 | fee_create              | float           |  0                    |                                           |
 | fee_execute             | float           |  0                    |                                           |
 | treasury                | string          |  false                |                                           |
-| enable_edit_core        | bool            |  true                 |                                           |
-| enable_edit_nft         | bool            |  true                 |                                           |
-| enable_edit_pnft        | bool            |  true                 |                                           |
-| enable_edit_cnft        | bool            |  true                 |                                           |
-| core_display            | bool            |  true                 |                                           |
-| nft_display             | bool            |  true                 |                                           |
-| pnft_display            | bool            |  true                 |                                           |
-| cnft_display            | bool            |  true                 |                                           |
-| collections_display     | bool            |  true                 |                                           |
-| enable_edit_collections | bool            |  true                 |                                           |
-| collections             | csv             |  ""                   |                                           |
-| sellers_display         | bool            |  true                 |                                           |
-| enable_edit_sellers     | bool            |  true                 |                                           |
-| sellers                 | csv             |  ""                   |                                           |
-| shop_styler             | obj             |  false                |                                           |
+| enable_edit_core        | bool            |  true                 |  allow user to use core asset checkbox             |
+| enable_edit_nft         | bool            |  true                 |  allow user to use nft asset checkbox              |
+| enable_edit_pnft        | bool            |  true                 |  allow user to use pnft asset checkbox             |
+| enable_edit_cnft        | bool            |  true                 |  allow user to use cnft asset checkbox             |
+| core_display            | bool            |  true                 |  default state of core checkbox                    |
+| nft_display             | bool            |  true                 |  default state of nft checkbox                     |
+| pnft_display            | bool            |  true                 |  default state of pnft checkbox                    |
+| cnft_display            | bool            |  true                 |  default state of cnft checkbox                    |
+| collections_display     | bool            |  true                 |  display "Collections" module in the settings      |
+| enable_edit_collections | bool            |  true                 |  allow users to add collection addresses           |
+| collections             | csv             |  ""                   |  comma seperated collection addresses to support   |
+| sellers_display         | bool            |  true                 |  display "Sellers" module in the settings          |
+| enable_edit_sellers     | bool            |  true                 |  allow users to add seller wallets                 |
+| sellers                 | csv             |  ""                   |  comma seperated seller wallets support            |
+| shop_styler             | obj             |  false                |  see below                                         |
 
 ### shop_styler
 the styler object lets you add some css to fine tune your shop's color scheme
