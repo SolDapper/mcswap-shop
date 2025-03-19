@@ -726,9 +726,7 @@ class shop {
         this.checker = clearInterval(this.checker);
     }
     async init(_data_){
-        // localStorage.clear();
         const result = {};
-
         if(_data_&&_data_.id){this.id=_data_.id;}else{return}
         if(_data_&&_data_.name){this.name=_data_.name;}else{this.name="McSwap Shop";}
         if(_data_&&_data_.logo){this.logo=_data_.logo;}else{this.logo=false;}
@@ -738,36 +736,28 @@ class shop {
         if(_data_&&_data_.default_display){this.default_display=_data_.default_display;}else{this.default_display="All Listings";}
         if(_data_&&_data_.text_intro){this.text_intro=_data_.text_intro;}else{this.text_intro="Initializing Market";}
         if(_data_&&_data_.text_buy){this.text_buy=_data_.text_buy;}else{this.text_buy="Buy Now";}
-
         if(_data_&&!_data_.master_settings){this.master_settings=_data_.master_settings;}else{this.master_settings=true;}
         if(_data_&&!_data_.enable_new_listings){this.enable_new_listings=_data_.enable_new_listings;}else{this.enable_new_listings=true;}
         if(_data_&&!_data_.enable_edit_sort){this.enable_edit_sort=_data_.enable_edit_sort;}else{this.enable_edit_sort=true;}
         if(_data_&&!_data_.enable_edit_display){this.enable_edit_display=_data_.enable_edit_display;}else{this.enable_edit_display=true;}
-        
         if(_data_&&_data_.fee_create&&_data_.fee_create>0){this.fee_create=_data_.fee_create;}else{this.fee_create=0;}
         if(_data_&&_data_.fee_execute&&_data_.fee_execute>0){this.fee_execute=_data_.fee_execute;}else{this.fee_execute=0;}
         if(_data_&&_data_.treasury){this.treasury=_data_.treasury;}else{this.treasury=false;}
-
         if(_data_&&!_data_.enable_edit_core){this.enable_edit_core=_data_.enable_edit_core;}else{this.enable_edit_core=true;}
         if(_data_&&!_data_.enable_edit_nft){this.enable_edit_nft=_data_.enable_edit_nft;}else{this.enable_edit_nft=true;}
         if(_data_&&!_data_.enable_edit_pnft){this.enable_edit_pnft=_data_.enable_edit_pnft;}else{this.enable_edit_pnft=true;}
         if(_data_&&!_data_.enable_edit_cnft){this.enable_edit_cnft=_data_.enable_edit_cnft;}else{this.enable_edit_cnft=true;}
-        
         if(_data_&&!_data_.core_display){this.core_display=_data_.core_display;}else{this.core_display=true;}
         if(_data_&&!_data_.nft_display){this.nft_display=_data_.nft_display;}else{this.nft_display=true;}
         if(_data_&&!_data_.pnft_display){this.pnft_display=_data_.pnft_display;}else{this.pnft_display=true;}
         if(_data_&&!_data_.cnft_display){this.cnft_display=_data_.cnft_display;}else{this.cnft_display=true;}
-
         if(_data_&&!_data_.collections_display){this.collections_display=false;}else{this.collections_display=true;}
         if(_data_&&!_data_.enable_edit_collections){this.enable_edit_collections=_data_.enable_edit_collections;}else{this.enable_edit_collections=true;}
         if(_data_&&_data_.collections){this.collections=_data_.collections;}else{this.collections="";}
-        
         if(_data_&&!_data_.sellers_display){this.sellers_display=false;}else{this.sellers_display=true;}
         if(_data_&&!_data_.enable_edit_sellers){this.enable_edit_sellers=_data_.enable_edit_sellers;}else{this.enable_edit_sellers=true;}
         if(_data_&&_data_.sellers){this.sellers=_data_.sellers;}else{this.sellers="";}
-        
         if(_data_&&_data_.shop_styler){this.shop_styler=_data_.shop_styler;}else{this.shop_styler=false;}
-
         const default_settings = {
             text_intro: this.text_intro,
             text_buy: this.text_buy,
@@ -810,7 +800,7 @@ class shop {
         default_settings.pnft_fee = pnft_fee;
         default_settings.nft_fee = nft_fee;
         default_settings.core_fee = core_fee;
-
+        
         if(!localStorage.getItem('mcswap-settings-'+default_settings.id)){localStorage.setItem('mcswap-settings-'+default_settings.id, JSON.stringify(default_settings));}
         const _settings_ = JSON.parse(localStorage.getItem('mcswap-settings-'+default_settings.id));
         
