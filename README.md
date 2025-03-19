@@ -84,9 +84,9 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 
 | **Parameter**         |    **Type**     |      **Default**      | **Description**                           |
 | :-----------------------|----------------:|:----------------------|:------------------------------------------|
-| id                      | string          |  false (bool)         |                                           |
+| id                      | string          |  false                |                                           |
 | name                    | string          |  McSwap Shop          |                                           |
-| logo                    | url             |  false (bool)         |                                           |
+| logo                    | url             |  false                |                                           |
 | logo_link               | url             |  #                    |                                           |
 | priority                | string          |  Low                  |                                           |
 | default_sort            | string          |  Newest First         |                                           |
@@ -114,7 +114,7 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 | sellers_display         | bool            |  true                 |                                           |
 | enable_edit_sellers     | bool            |  true                 |                                           |
 | sellers                 | csv             |  ""                   |                                           |
-| shop_styler             | obj             |  false (bool)         |                                           |
+| shop_styler             | obj             |  false                |                                           |
 
 ### shop_styler object
 the styler object lets you add some css to fine tune your shop's color scheme
