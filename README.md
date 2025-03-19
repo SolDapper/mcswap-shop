@@ -114,4 +114,32 @@ if you're using a wallet connector other than [mcswap-connector](https://github.
 | sellers_display         | bool            |  true                 |                                           |
 | enable_edit_sellers     | bool            |  true                 |                                           |
 | sellers                 | csv             |  ""                   |                                           |
-| shop_styler             | csv             |  ""                   |                                           |
+| shop_styler             | obj             |  false (bool)         |                                           |
+
+### shop_styler object
+the styler object lets you add some css to fine tune your shop's color scheme
+```javascript
+  {
+    shop:{
+      "background": "#1a1a1a",
+      "background-repeat": "no-repeat",
+      "background-size": "cover",
+      "background-position": "center", // add css style to your shop background
+    },
+    wrapper:{
+      // "background": "#000000eb" // optional layer between background and shop content
+    },
+    header:{
+      "color": "#fff", // page name color
+    },
+    titles:{
+      "color": "#fff", // listing title color
+    },
+    details:{
+      "color": "#1367d4", // listing price color 
+    },
+    labels:{
+      "color": "#1367d4", // settings page label color
+    }
+  }
+```
