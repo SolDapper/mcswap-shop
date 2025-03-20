@@ -230,6 +230,7 @@ li.control-li-list label{
     font-weight: bold;
     display: block;
     margin: -1px 0 9px 5px;
+    font-size: 14px;
 }
 li.control-li-list input.mint-address{
     border: 0;
@@ -567,6 +568,7 @@ li.control-li-preferences button.mcswap-save-settings:disabled:hover{
 }
 li.control-li-sellers label{
     font-weight: bold;
+    font-size: 14px;
     display: block;
     margin: -1px 0 9px 5px;
 }
