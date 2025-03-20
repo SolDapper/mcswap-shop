@@ -1237,7 +1237,9 @@ class shop {
                     base_fee=default_settings.core_fee;
                     temp_fee = await connection.getMinimumBalanceForRentExemption(mcswap.CORE_SWAP_STATE.span);
                 }
-                console.log(temp_fee);
+                temp_fee = temp_fee/1000000000;
+                toast("Temporary Rent", 3000);
+                toast(temp_fee+" SOL", 3000);
                 let total_fee = parseFloat(base_fee) + parseFloat(default_settings.fee_create);
                 total_fee = total_fee.toFixed(9);
                 const total_x = total_fee.split(".");
