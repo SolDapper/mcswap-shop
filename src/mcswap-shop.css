@@ -238,6 +238,7 @@ li.control-li-list input.mint-address{
     padding: 0 15px;
     border-radius: 10px;
     font-weight: bold;
+    font-size: 14px;
     width: 360px;
     display: inline-block;
     vertical-align: top;
@@ -490,6 +491,7 @@ li.control-li-collections button.mcswap-update-collections:disabled:hover{
 }
 li.control-li-preferences label{
     font-weight: bold;
+    font-size: 14px;
     display: inline-block;
     margin: -1px 0 9px 5px;
     height: 40px;
@@ -598,6 +600,7 @@ li.control-li-sellers textarea:disabled{
 }
 li.control-li-collections label{
     font-weight: bold;
+    font-size: 14px;
     display: block;
     margin: -1px 0 9px 5px;
 }
