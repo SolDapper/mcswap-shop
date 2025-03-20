@@ -7,6 +7,7 @@ import "@fontsource/ubuntu";
 import Toastify from 'toastify-js';
 import "toastify-js/src/toastify.css";
 import mcswap from "mcswap-sdk"; 
+import {Connection} from "@solana/web3.js"
 class shop {
     constructor(rpc=false){
         this.rpc = rpc;
@@ -1218,10 +1219,25 @@ class shop {
                 $("#"+default_settings.id+" .token-address, #"+default_settings.id+" .token-amount, #"+default_settings.id+" .sol-amount").prop("disabled", false);
                 const standard = $("#mcswap-cover #mcswap-preview-standard").html();
                 let base_fee = 0;
-                if(standard=="CNFT"){base_fee=default_settings.cnft_fee;}
-                else if(standard=="NFT"){base_fee=default_settings.nft_fee;}
-                else if(standard=="PNFT"){base_fee=default_settings.pnft_fee;}
-                else if(standard=="CORE"){base_fee=default_settings.core_fee;}
+                let temp_fee = 0;
+                const connection = new Connection(rpc, "confirmed");
+                if(standard=="CNFT"){
+                    base_fee=default_settings.cnft_fee;
+                    temp_fee = await connection.getMinimumBalanceForRentExemption(mcswap.CNFT_SWAP_STATE.span);
+                }
+                else if(standard=="NFT"){
+                    base_fee=default_settings.nft_fee;
+                    temp_fee = await connection.getMinimumBalanceForRentExemption(mcswap.NFT_SWAP_STATE.span);
+                }
+                else if(standard=="PNFT"){
+                    base_fee=default_settings.pnft_fee;
+                    temp_fee = await connection.getMinimumBalanceForRentExemption(mcswap.PNFT_SWAP_STATE.span);
+                }
+                else if(standard=="CORE"){
+                    base_fee=default_settings.core_fee;
+                    temp_fee = await connection.getMinimumBalanceForRentExemption(mcswap.CORE_SWAP_STATE.span);
+                }
+                console.log(temp_fee);
                 let total_fee = parseFloat(base_fee) + parseFloat(default_settings.fee_create);
                 total_fee = total_fee.toFixed(9);
                 const total_x = total_fee.split(".");
