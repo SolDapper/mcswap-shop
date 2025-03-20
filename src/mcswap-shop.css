@@ -12,6 +12,9 @@
     border-radius: 10px;
     /* border: 1px solid #000; */
     font-family: "Ubuntu";
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 .mcswap-wrapper-light{
     color: #111;
@@ -205,6 +208,7 @@
     margin: 0;
     padding: 0;
     display: none;
+    overflow: hidden;
 }
 .mcswap-controls ul, .mcswap-controls ul li{
     margin: 0;
@@ -687,20 +691,20 @@ li.control-li-preferences span.mcswap-standard-error{
 
 .mcswap-poweredby{
     text-align: center;
+    color: #565656;
     border-top: 1px solid #222;
     border-bottom: 0;
-    height: 60px;
     border-radius: 0 0 10px 10px;
-    color: #565656;
     font-size: 10px;
     font-weight: bold;
+    padding: 20px 0 20px 0;
+    margin: 0;
 }
 .mcswap-poweredby a{
-    line-height: 60px;
     text-decoration: none;
     font-weight: bold;
     font-size: 10px;
-    color: #154ab3;
+    color: #fff;
     transition: 0.3s;
     margin-left: 3px;
     margin-right: 3px;
