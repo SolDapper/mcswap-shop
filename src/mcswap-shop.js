@@ -750,7 +750,7 @@ class shop {
     }
     async init(_data_){
         const result = {};
-        if(_data_&&_data_.id){this.id=_data_.id;}else{return}
+        if(_data_&&_data_.id&&$("#"+_data_.id).length){this.id=_data_.id;}else{return}
         if(_data_&&_data_.name){this.name=_data_.name;}else{this.name="McSwap Shop";}
         if(_data_&&_data_.logo){this.logo=_data_.logo;}else{this.logo=false;}
         if(_data_&&_data_.logo_link){this.logo_link=_data_.logo_link;}else{this.logo_link="#";}
