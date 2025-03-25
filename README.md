@@ -3,7 +3,7 @@ This module will embed a Solana NFT storefront into an existing application. Lis
 
 ![mcswap shop](https://repository-images.githubusercontent.com/944741416/d30f1c19-99a5-479f-ab66-ba9ab5d4c6e5)
 
-![powered by solana](http://mcswap.xyz/gh/stacked-color.svg)
+![powered by solana](https://cd6na2lma222gpigviqcpr5n7uewgxd7uhockofelflsuaop7oiq.arweave.net/EPzQaWwGtaM9BqogJ8et_QljXH-h3CU4pFlXKgHP-5E)
 
 ## install
 ```javascript
