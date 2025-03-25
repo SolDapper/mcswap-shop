@@ -1054,7 +1054,7 @@ class shop {
             else{
                 $("#"+default_settings.id+" .mcswap-listings").hide();
                 $("#"+default_settings.id+" .mcswap-controls").fadeIn(300);
-                $("#"+default_settings.id+" .create-priority").first().focus();
+                $("#"+default_settings.id+" .create-priority").focus();
                 toast("Settings & Preferences", 2000);
             }
         });
