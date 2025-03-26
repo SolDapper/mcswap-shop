@@ -51,29 +51,6 @@ myshop.init({
   sellers_display: true,
   enable_edit_sellers: true,
   sellers: "7Z3LJB2rxV4LiRBwgwTcufAWxnFTVJpcoCMiCo8Z5Ere,2jcih7dUFmEQfMUXQQnL2Fkq9zMqj4jwpHqvRVe3gGLL",
-  shop_styler: {
-    shop:{
-      "background": "#1a1a1a",
-      "background-repeat": "no-repeat",
-      "background-size": "cover",
-      "background-position": "center"
-    },
-    wrapper:{
-      // "background": "#000000eb"
-    },
-    header:{
-      "color": "#fff"
-    },
-    titles:{
-      "color": "#fff"
-    },
-    details:{
-      "color": "#1367d4",
-    },
-    labels:{
-      "color": "#1367d4",
-    }
-  }
 });
 ```
 
@@ -127,32 +104,3 @@ const provider = window.mcswap;
 | sellers_display         | bool            |  true                 |  display "Sellers" module in the settings          |
 | enable_edit_sellers     | bool            |  true                 |  allow users to add seller wallets                 |
 | sellers                 | csv             |  ""                   |  comma seperated seller wallets support            |
-| shop_styler             | obj             |  false                |  see below                                         |
-
-### shop_styler
-The shop_styler object lets you add css to fine tune your shop's color scheme
-```javascript
-  {
-    shop:{
-      "background": "#1a1a1a",
-      "background-repeat": "no-repeat",
-      "background-size": "cover",
-      "background-position": "center", // add css style to your shop background
-    },
-    wrapper:{
-      // "background": "#000000eb" // optional layer between background and shop content
-    },
-    header:{
-      "color": "#fff", // page name color
-    },
-    titles:{
-      "color": "#fff", // listing title color
-    },
-    details:{
-      "color": "#1367d4", // listing price color 
-    },
-    labels:{
-      "color": "#1367d4", // settings page label color
-    }
-  }
-```
