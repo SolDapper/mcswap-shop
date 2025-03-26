@@ -1,7 +1,7 @@
 # mcswap-shop
 This module will embed a Solana NFT storefront into an existing application. Listings are powered by the native Solana programs of the McSwap Trustless Escrow Protocol. This module makes use of the [mcswap-sdk](https://github.com/SolDapper/mcswap-sdk) to directly integrate with the protocol.
 
-![mcswap shop](https://repository-images.githubusercontent.com/944741416/d30f1c19-99a5-479f-ab66-ba9ab5d4c6e5)
+![mcswap shop](https://repository-images.githubusercontent.com/944741416/ff495e7b-13c4-4692-9ec5-ac8e115229e9)
 
 ![powered by solana](https://cd6na2lma222gpigviqcpr5n7uewgxd7uhockofelflsuaop7oiq.arweave.net/EPzQaWwGtaM9BqogJ8et_QljXH-h3CU4pFlXKgHP-5E)
 
