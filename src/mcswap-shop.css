@@ -86,7 +86,7 @@
     box-shadow: 0 0 10px 3px #154ab3;
 }
 .mcswap-wrapper button:disabled:hover{
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;
     text-shadow: none;
     box-shadow: none;
@@ -259,7 +259,7 @@ li.control-li-list button.mcswap-list-it{
     cursor: pointer;
     color: #fff;
     text-shadow: none;
-    background: #154ab3;
+    background: #0e0e0e;
     border: 0;
     border-radius: 20px;
     outline: none;
@@ -283,7 +283,7 @@ li.control-li-list button.mcswap-list-it:disabled{
     cursor: default;
 }
 li.control-li-list button.mcswap-list-it:disabled:hover{
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;
     text-shadow: none;
     box-shadow: none;
@@ -296,7 +296,7 @@ li.control-li-list button.mcswap-list-cancel{
     cursor: pointer;
     color: #fff;
     text-shadow: none;
-    background: #154ab3;
+    background: #0e0e0e;
     border: 0;
     border-radius: 20px;
     outline: none;
@@ -320,7 +320,7 @@ li.control-li-list button.mcswap-list-cancel:disabled{
     cursor: default;
 }
 li.control-li-list button.mcswap-list-cancel:disabled:hover{
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;
     text-shadow: none;
     box-shadow: none;
@@ -390,7 +390,7 @@ li.control-li-list button.mcswap-create-it{
     cursor: pointer;
     color: #fff;
     text-shadow: none;
-    background: #154ab3;
+    background: #0e0e0e;
     border: 0;
     border-radius: 20px;
     outline: none;
@@ -413,7 +413,7 @@ li.control-li-list button.mcswap-create-it:disabled{
     cursor: default;
 }
 li.control-li-list button.mcswap-create-it:disabled:hover{
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;
     text-shadow: none;
     box-shadow: none;
@@ -423,7 +423,7 @@ li.control-li-sellers button.mcswap-update-it{
     cursor: pointer;
     color: #fff;
     text-shadow: none;
-    background: #154ab3;
+    background: #0e0e0e;
     border: 0;
     border-radius: 20px;
     outline: none;
@@ -446,7 +446,7 @@ li.control-li-sellers button.mcswap-update-it:disabled{
     cursor: default;
 }
 li.control-li-sellers button.mcswap-update-it:disabled:hover{
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;
     text-shadow: none;
     box-shadow: none;
@@ -456,7 +456,7 @@ li.control-li-collections button.mcswap-update-collections{
     cursor: pointer;
     color: #fff;
     text-shadow: none;
-    background: #154ab3;
+    background: #0e0e0e;
     border: 0;
     border-radius: 20px;
     outline: none;
@@ -479,7 +479,7 @@ li.control-li-collections button.mcswap-update-collections:disabled{
     cursor: default;
 }
 li.control-li-collections button.mcswap-update-collections:disabled:hover{
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;
     text-shadow: none;
     box-shadow: none;
@@ -531,7 +531,7 @@ li.control-li-preferences button.mcswap-save-settings{
     cursor: pointer;
     color: #fff;
     text-shadow: none;
-    background: #154ab3;
+    background: #0e0e0e;
     border: 0;
     border-radius: 20px;
     outline: none;
@@ -835,7 +835,7 @@ li.control-li-preferences span.mcswap-standard-error{
     border: 0;
     outline: none;
     cursor: pointer;
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;    
     font-weight: bold;
     margin: 19px 0 0 0;
@@ -991,7 +991,7 @@ button#mcswap-preview-collection-value:hover{
     border: 0;
     outline: none;
     cursor: pointer;
-    background: #154ab3;
+    background: #0e0e0e;
     color: #fff;    
     font-weight: bold;
     margin: 19px 0 0 0;
@@ -1009,7 +1009,7 @@ button#mcswap-preview-collection-value:hover{
     box-shadow: 0 0 10px 3px #111;
 }
 #mcswap-preview-next{
-    background: #154ab3;
+    background: #0e0e0e;
 }
 #mcswap-preview-next:hover{
     text-shadow: none;
