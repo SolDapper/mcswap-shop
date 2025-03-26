@@ -18,7 +18,6 @@ npm i mcswap-shop
 ## usage
 ```javascript
 import shop from "mcswap-shop";
-import "mcswap-shop/src/colors/green-shop.css";
 const myshop = new shop(process.env.RPC);
 myshop.init({
   id: "my-market",
