@@ -925,7 +925,7 @@ class shop {
 
         const currentYear = new Date().getFullYear();
         ele += "<div class='mcswap-poweredby'>";
-            ele += "Powered by <a target='_blank' class='mcswap-poweredby-copy' href='https://mcswap.xyz'>McSwap Shop</a> &copy; "+currentYear;
+            ele += "Powered by <a target='_blank' class='mcswap-poweredby-copy' href='https://www.mcswap.xyz'>McSwap</a> &copy; "+currentYear;
         ele += "</div>";
 
         ele += "</div>";
