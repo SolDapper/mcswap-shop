@@ -1,6 +1,6 @@
 {
   "name": "mcswap-shop",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "McSwap Shop Module",
   "main": "src/mcswap-shop.js",
   "type": "module",
