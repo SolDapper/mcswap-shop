@@ -160,22 +160,22 @@
     margin: 0 0 0 0;
 }
 .mcswap-header ul li.mcswap-settings img{
-    display: none;
-    width: 40px;
-    height: 40px;
-    margin: 26px 0 0 1px;
-    padding: 0;
-    transition: 0.3s;
     cursor: pointer;
+    width: 36px;
+    height: 36px;
+    margin: 29px 0 0 1px;
+    padding: 0;
+    transition: all .3s;
+    display: none;
 }
 .mcswap-header ul li.mcswap-refresh img{
-    display: block;
-    width: 39px;
-    height: 39px;
-    margin: 26px 0 0 1px;
-    padding: 0;
-    transition: 0.3s;
     cursor: pointer;
+    width: 36px;
+    height: 36px;
+    margin: 28px 0 0 1px;
+    padding: 0;
+    transition: all .3s;
+    display: block;
 }
 .mcswap-header ul li.mcswap-settings img:hover{
     opacity: 0.25;
@@ -635,14 +635,16 @@ li.control-li-collections textarea:disabled{
 
 li.control-li-preferences input.mcswap-radio{
     /* Double-sized Checkboxes */
-    -ms-transform: scale(1.4); /* IE */
-    -moz-transform: scale(1.4); /* FF */
-    -webkit-transform: scale(1.4); /* Safari and Chrome */
-    -o-transform: scale(1.4); /* Opera */
-    transform: scale(1.4);
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
     padding: 10px;
     margin-top: 5px;
     cursor: pointer;
+    accent-color: #000;
+    color: #fff;
 }
 li.control-li-preferences span{
     display: inline-block;
@@ -1025,12 +1027,10 @@ button#mcswap-preview-collection-value:hover{
     color: #154ab3;
 }
 .mcswap-wrapper .token-currency{
-    color: #154ab3;
-    text-shadow: 0 0 12px #1141a1;
+    color: #676767;
 }
 .mcswap-wrapper .sol-currency{
     color: #5310a4;
-    text-shadow: 0 0 12px #420988;
 }
 
 .mcswap-wrapper .create-priority{
