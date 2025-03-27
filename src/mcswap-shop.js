@@ -714,7 +714,6 @@ class shop {
         }
     }
     async start(_data_,miliseconds){ 
-
         this.checker = setInterval(async function(){
             const provider = window.mcswap;
             if(provider && provider.isConnected && provider.isConnected === true){
@@ -744,13 +743,22 @@ class shop {
                 $("#"+_data_.id+" .mcswap-details-buy").prop("disabled", false);
             }
         }, miliseconds);
-
     }
     async stop(){ 
         this.checker = clearInterval(this.checker);
     }
     async init(_data_){
         const result = {};
+        // rpc connection test
+        const connectionTest = await fetch(this.rpc,{
+            method:'POST',
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({"jsonrpc":"2.0","id":"test","method":"getAsset","params":{"id":"So11111111111111111111111111111111111111111"}})
+        }).catch(function(err){});
+        if(!connectionTest.ok || connectionTest.ok!=true){
+            console.log("invalid rpc endpoint");
+            return;
+        }
         if(_data_&&_data_.id&&$("#"+_data_.id).length){this.id=_data_.id;}else{return}
         if(_data_&&_data_.name){this.name=_data_.name;}else{this.name="McSwap Shop";}
         if(_data_&&_data_.logo){this.logo=_data_.logo;}else{this.logo=false;}
