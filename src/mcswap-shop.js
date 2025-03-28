@@ -591,7 +591,7 @@ class shop {
                         $(this).parent().parent().addClass("active");
                         $("#"+_data_.id+" .mcswap-details-buy").prop("disabled", true);
                         $("#"+_data_.id+" .mcswap-details-delist").prop("disabled", true);
-                        $("body").append('<div id="mcswap-transaction-preview"><img id="mcswap-transaction-close" src="'+$("#mcswap-cover-close").attr("src")+'" /><div id="mcswap-payment-options">Sign with</div><button data-format="'+$(this).data("format")+'" data-id="'+$(this).data("id")+'" id="pay-my-wallet">My Wallet</button><button data-format="'+$(this).data("format")+'" data-mint="'+$(this).data("mint")+'" id="pay-solana-pay">Solana Pay</button></div>');
+                        $("body").append('<div id="mcswap-transaction-preview"><img id="mcswap-transaction-close" src="'+$("#mcswap-cover-close").attr("src")+'" /><div id="mcswap-payment-options">Sign with</div><button data-format="'+$(this).data("format")+'" data-id="'+$(this).data("id")+'" id="pay-my-wallet">My Wallet</button><button disabled data-format="'+$(this).data("format")+'" data-mint="'+$(this).data("mint")+'" id="pay-solana-pay">Solana Pay</button></div>');
                         $("#mcswap-transaction-preview").fadeIn(400);
                         $("#mcswap-transaction-close").on("click", async function(){
                             $("#"+_data_.id+" ul.mcswap-item").removeClass("active");
