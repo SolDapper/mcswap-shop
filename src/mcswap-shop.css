@@ -92,6 +92,85 @@
     box-shadow: none;
 }
 
+#mcswap-transaction-preview{
+    width: 300px;
+    height: 80px;
+    background: #fff;
+    display: none;
+    position: fixed;
+    float: left;
+    top: calc(50% - 58px);
+    left: calc(50% - 168px);
+    border-radius: 10px;
+    padding: 18px;
+    z-index: 999;
+    color: #111;
+    font-family: "Ubuntu";
+}
+#mcswap-transaction-close{
+    filter: invert(100%);
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    float: right;
+    color: #010101;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#mcswap-transaction-close:hover{
+    opacity: 0.5;
+}
+#mcswap-payment-options{
+    font-weight: bold;
+    margin-left: 4px;
+}
+#pay-my-wallet, #pay-solana-pay{
+    display: inline-block;
+    padding: 0;
+    height: 41px;
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: #111;
+    color: #fff;    
+    font-weight: bold;
+    margin: 19px 0 0 0;
+    transition: 0.3s;
+    text-shadow: none;
+    vertical-align: top;
+    width: 142px;
+}
+#pay-my-wallet{
+    margin-right: 15px;
+    background: #111;
+}
+#pay-my-wallet:hover{
+    text-shadow: none;
+    box-shadow: 0 0 10px 3px #111;
+}
+#pay-my-wallet:disabled, #pay-my-wallet:disabled:hover{
+    text-shadow: none;
+    box-shadow: none;
+    opacity: 0.5;
+}
+
+#pay-solana-pay{
+    background: #0e0e0e;
+}
+#pay-solana-pay:hover{
+    text-shadow: none;
+    box-shadow: 0 0 10px 3px #111;
+}
+#pay-solana-pay:disabled, #pay-solana-pay:disabled:hover{
+    text-shadow: none;
+    box-shadow: none;
+    opacity: 0.5;
+}
+
 .mcswap-header{
     border-radius: 8px 8px 0 0;
     border-bottom: 1px solid #222;
