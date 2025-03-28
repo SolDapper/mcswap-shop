@@ -1,6 +1,6 @@
 {
   "name": "mcswap-shop",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "McSwap Shop Module",
   "main": "src/mcswap-shop.js",
   "type": "module",
@@ -17,7 +17,7 @@
     "@fontsource/ubuntu": "^5.2.5",
     "@solana/web3.js": "^1.98.0",
     "jquery": "^3.7.1",
-    "mcswap-sdk": "^0.4.6",
+    "mcswap-sdk": "^0.5.1",
     "toastify-js": "^1.12.0"
   },
   "repository": {
