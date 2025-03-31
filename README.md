@@ -72,34 +72,41 @@ const provider = window.mcswap;
 ## config options
 
 | **Parameter**         |    **Type**     |      **Default**      | **Description**                           |
-| :-----------------------|----------------:|:----------------------|:---------------------------------------------------|
-| id                      | string          |  false                |  id of the html element that will be your shop     |
-| name                    | string          |  McSwap Shop          |  the display name for this shop                    |
-| logo                    | url             |  false                |  relative or full path to your logo                |
-| logo_link               | url             |  #                    |  url to open when the logo is clicked              |
-| priority                | string          |  Low                  |  default priority fee level for transactions       |
-| default_sort            | string          |  Newest First         |  default ordering for listings                     |
-| default_display         | string          |  All Listings         |  default listings filter                           |
-| text_intro              | string          |  Initializing Shop    |  displayed when the shop element is loading        |
-| text_buy                | string          |  Buy Me               |  the text of the "Buy Me" buttons for listings     |
-| master_settings         | bool            |  true                 |  show the settings gear icon button (recommended)  |
-| enable_new_listings     | bool            |  true                 |  allow users to create new listings (recommended)  |
-| enable_edit_sort        | bool            |  true                 |  allow users to sort listings (recommended)        |
-| enable_edit_display     | bool            |  true                 |  allow users to filter listings (recommended)      |
-| fee_create              | float           |  0                    |  optional sol fee for creating listings here       |
-| fee_execute             | float           |  0                    |  optional sol fee for buying listings here         |
-| treasury                | string          |  false                |  wallet address for optional fee collection        |
-| enable_edit_core        | bool            |  true                 |  allow user to use core asset checkbox             |
-| enable_edit_nft         | bool            |  true                 |  allow user to use nft asset checkbox              |
-| enable_edit_pnft        | bool            |  true                 |  allow user to use pnft asset checkbox             |
-| enable_edit_cnft        | bool            |  true                 |  allow user to use cnft asset checkbox             |
-| core_display            | bool            |  true                 |  default state of core checkbox                    |
-| nft_display             | bool            |  true                 |  default state of nft checkbox                     |
-| pnft_display            | bool            |  true                 |  default state of pnft checkbox                    |
-| cnft_display            | bool            |  true                 |  default state of cnft checkbox                    |
-| collections_display     | bool            |  true                 |  display "Collections" module in the settings      |
-| enable_edit_collections | bool            |  true                 |  allow users to add collection addresses           |
-| collections             | csv             |  ""                   |  comma seperated collection addresses to support   |
-| sellers_display         | bool            |  true                 |  display "Sellers" module in the settings          |
-| enable_edit_sellers     | bool            |  true                 |  allow users to add seller wallets                 |
-| sellers                 | csv             |  ""                   |  comma seperated seller wallets support            |
+| :-----------------------|----------------:|:----------------------|:--------------------------------------------------------- |
+| id                      | string          |  false                |  id of the html element that will be your shop            |
+| name                    | string          |  McSwap Shop          |  the display name for this shop                           |
+| logo                    | url             |  false                |  relative or full path to your logo                       |
+| logo_link               | url             |  #                    |  url to open when the logo is clicked                     |
+| priority                | string          |  Low                  |  default priority fee level for transactions              |
+| default_sort            | string          |  Newest First         |  default ordering for listings                            |
+| default_display         | string          |  All Listings         |  default listings filter                                  |
+| text_intro              | string          |  Initializing Shop    |  displayed when the shop element is loading               |
+| text_buy                | string          |  Buy Me               |  the text of the "Buy Me" buttons for listings            |
+| master_settings         | bool            |  true                 |  show the settings gear icon button (recommended)         |
+| enable_new_listings     | bool            |  true                 |  allow users to create new listings (recommended)         |
+| enable_edit_sort        | bool            |  true                 |  allow users to sort listings (recommended)               |
+| enable_edit_display     | bool            |  true                 |  allow users to filter listings (recommended)             |
+| fee_create              | float           |  0                    |  optional sol fee for creating listings here              |
+| fee_execute             | float           |  0                    |  optional sol fee for buying listings here                |
+| treasury                | string          |  false                |  wallet address for optional fee collection               |
+| enable_edit_core        | bool            |  true                 |  allow user to use core asset checkbox                    |
+| enable_edit_nft         | bool            |  true                 |  allow user to use nft asset checkbox                     |
+| enable_edit_pnft        | bool            |  true                 |  allow user to use pnft asset checkbox                    |
+| enable_edit_cnft        | bool            |  true                 |  allow user to use cnft asset checkbox                    |
+| core_display            | bool            |  true                 |  default state of core checkbox                           |
+| nft_display             | bool            |  true                 |  default state of nft checkbox                            |
+| pnft_display            | bool            |  true                 |  default state of pnft checkbox                           |
+| cnft_display            | bool            |  true                 |  default state of cnft checkbox                           |
+| collections_display     | bool            |  true                 |  display "Collections" module in the settings             |
+| enable_edit_collections | bool            |  true                 |  allow users to add collection addresses                  |
+| collections             | csv             |  ""                   |  comma seperated collection addresses to support          |
+| sellers_display         | bool            |  true                 |  display "Sellers" module in the settings                 |
+| enable_edit_sellers     | bool            |  true                 |  allow users to add seller wallets                        |
+| sellers                 | csv             |  ""                   |  comma seperated seller wallets support                   |
+| solana_pay              | url             |  false                |  your solana pay api host: https://www.mcswap-pay.xyz     |
+| kiosk                   | bool/obj        |  false                |  see below                                                |
+```javascript
+{
+  touch: true // true or false
+}
+```
