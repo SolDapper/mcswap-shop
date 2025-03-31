@@ -1,8 +1,8 @@
 // name: mcswap-shop.js
 // author: @SolDapper
 'use strict';
-// import "./mcswap-shop.css";
-import "../plugin/mcswap-shop.css";
+import "./mcswap-shop.css";
+// import "../plugin/mcswap-shop.css";
 import $ from "jquery";
 import "@fontsource/ubuntu";
 import Toastify from 'toastify-js';
