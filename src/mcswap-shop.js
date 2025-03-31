@@ -564,7 +564,6 @@ class shop {
                                                 const connection = new Connection(rpc, "confirmed");
                                                 const signatures = await connection.getSignaturesForAddress(new PublicKey(escrow), "confirmed");
                                                 const sig = signatures[0];
-                                                console.log(sig);
                                                 if(sig && sig.memo){
                                                     const seperate = sig.memo.split("] ");
                                                     sig.memo = seperate[1].trim();
