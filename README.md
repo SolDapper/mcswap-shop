@@ -12,7 +12,7 @@ npm i mcswap-shop
 
 ## html
 ```html
-<div id="my-market"></div>
+<div id="my-shop"></div>
 ```
 
 ## usage
@@ -20,7 +20,7 @@ npm i mcswap-shop
 import shop from "mcswap-shop";
 const myshop = new shop(process.env.RPC);
 myshop.init({
-  id: "my-market",
+  id: "my-shop",
   name: "McSwap Shop",
   logo: "",
   logo_link: "",
