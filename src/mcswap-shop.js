@@ -434,9 +434,11 @@ class shop {
                 let links;
                 let listing_buttons;
                 if(_data_.kiosk==false || _data_.kiosk.touch!=false || _data_.solana_pay==false){
-                    let hasCollection = "";
-                    if(item.collection!=false){hasCollection = '<a target="_blank" data-collection="'+item.collection+'" href="https://solana.fm/address/'+item.collection+'" class="mcswap-links explore-link">Collection</a><span class="mcswap-links-sep">:</span>';}
-                    links = hasCollection+'<a target="_blank" data-mint="'+item.sellerMint+'" href="https://solana.fm/address/'+item.sellerMint+'" class="mcswap-links mint-link">Address</a><span class="mcswap-links-sep">:</span><a target="_blank" data-seller="'+item.seller+'" href="https://solana.fm/address/'+item.seller+'" class="mcswap-links seller-link">Seller</a>';
+                    if(_data_.kiosk==false){
+                        let hasCollection = "";
+                        if(item.collection!=false){hasCollection = '<a target="_blank" data-collection="'+item.collection+'" href="https://solana.fm/address/'+item.collection+'" class="mcswap-links explore-link">Collection</a><span class="mcswap-links-sep">:</span>';}
+                        links = hasCollection+'<a target="_blank" data-mint="'+item.sellerMint+'" href="https://solana.fm/address/'+item.sellerMint+'" class="mcswap-links mint-link">Address</a><span class="mcswap-links-sep">:</span><a target="_blank" data-seller="'+item.seller+'" href="https://solana.fm/address/'+item.seller+'" class="mcswap-links seller-link">Seller</a>';
+                    }
                     listing_buttons = '<button data-format="'+item.standard+'" data-mint="'+item.sellerMint+'" data-id="'+item.acct+'" class="mcswap-details-buy">'+_data_.text_buy+'</button><button data-format="'+item.standard+'" data-mint="'+item.sellerMint+'" data-id="'+item.acct+'" class="mcswap-details-delist">Delist</button>';
                 }
                 else{
