@@ -431,7 +431,7 @@ class shop {
                 if(item.units>0){item.units = parseFloat(item.units).toFixed(item.token.decimals);units=await commas(item.units);}else{units="0.0";}
                 if($("#"+_data_.id+" ul[data-id='"+item.acct+"']").length){$("#"+_data_.id+" ul[data-id='"+item.acct+"']").remove();}
                 const token2 = '<div class="mcswap-details-price-2"><span class="mcswap-details-amount-2">'+lamports+'</span> <span class="mcswap-details-symbol">SOL</span></div>';
-                let links;
+                let links = "";
                 let listing_buttons;
                 if(_data_.kiosk==false || _data_.kiosk.touch!=false || _data_.solana_pay==false){
                     if(_data_.kiosk==false){
