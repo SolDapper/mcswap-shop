@@ -2,7 +2,6 @@
 // author: @SolDapper
 'use strict';
 import "./mcswap-shop.css";
-// import "../plugin/mcswap-shop.css";
 import $ from "jquery";
 import "@fontsource/ubuntu";
 import Toastify from 'toastify-js';
@@ -567,7 +566,10 @@ class shop {
                                                 const signatures = await connection.getSignaturesForAddress(new PublicKey(escrow), "confirmed");
                                                 const sig = signatures[0];
                                                 if(sig && sig.memo){
-                                                    const seperate = sig.memo.split("] ");
+                                                    let seperate = sig.memo.split("] ");
+                                                    // seperate = seperate[1].trim();
+                                                    // const parts = seperate.split("/");
+                                                    // sig.memo = parts[0].trim();
                                                     sig.memo = seperate[1].trim();
                                                 }
                                                 if(sig && !sig.err && sig.confirmationStatus=="confirmed" && sig.memo && sig.memo==ref){
@@ -974,6 +976,7 @@ class shop {
         if(_data_&&_data_.sellers){this.sellers=_data_.sellers;}else{this.sellers="";}
         if(_data_&&_data_.solana_pay&&_data_.solana_pay!=true){this.solana_pay=_data_.solana_pay;}else{this.solana_pay=false;}
         if(_data_&&!_data_.kiosk){this.kiosk=false;}else{this.kiosk=_data_.kiosk;}
+        if(_data_&&!_data_.physicals){this.physicals=[];}else{this.physicals=_data_.physicals;}
         const default_settings = {
             text_intro: this.text_intro,
             text_buy: this.text_buy,
@@ -1007,7 +1010,8 @@ class shop {
             sellers_display: this.sellers_display,
             solana_pay_logo: this.solana_pay_logo,
             solana_pay: this.solana_pay,
-            kiosk: this.kiosk
+            kiosk: this.kiosk,
+            physicals: this.physicals,
         };
         const rpc = this.rpc;
         const cnft_fee = await mcswap.fee({"rpc":rpc,"display":true,"standard":"cnft"});
@@ -1076,6 +1080,13 @@ class shop {
             ele += "<input disabled class='token-amount' data-decimals='0' placeholder='Token Amount' autocomplete='off' type='text' /><span class='token-currency'></span>";
             ele += "<div class='mcswap-spacer-b'></div>";
             ele += "<input disabled class='sol-amount' data-decimals='9' placeholder='Amount' autocomplete='off' type='text' /><span class='sol-currency'>SOL</span>";
+            ele += "<div class='mcswap-spacer-b'></div>";
+            ele += "<select disabled class='mcswap-physical'>";
+            for(let i=0;i<default_settings.physicals.length;i++){
+                ele += "<option value='"+i+"'>"+default_settings.physicals[i]+"</option>";
+            }
+            ele += "</select>";
+            ele += "<input disabled class='mcswap-email' placeholder='Seller Email' />";
             ele += "<div class='mcswap-spacer-b'></div>";
             ele += "<button disabled class='mcswap-create-it'>Create Listing</button>";
             ele += "<div class='mcswap-create-fees'><span class='mcswap-create-fees-label'>Listing Fee</span><span class='mcswap-create-fees-value'>0.000000000</span></div>";
@@ -1240,6 +1251,25 @@ class shop {
             }
         });
 
+        // physical mode change
+        $("#"+default_settings.id+" .mcswap-physical").on("change", async function(){
+            if($(this).val()==0){
+                $("#"+default_settings.id+" .mcswap-email").prop("disabled", true).val("");
+            }
+            else if($(this).val()==1){
+                $("#"+default_settings.id+" .mcswap-email").prop("disabled", false);
+            }
+            else if($(this).val()==2){
+                $("#"+default_settings.id+" .mcswap-email").prop("disabled", false);
+            }
+            allowListing();
+        });
+
+        // email field change with validation
+        $("#"+default_settings.id+" .mcswap-email").on("keyup paste", async function(){
+            allowListing();
+        });
+
         // cancel preview
         $("#"+default_settings.id+" .mcswap-list-cancel").on("click", async function(){
             $(this).hide();
@@ -1247,6 +1277,9 @@ class shop {
             $("#"+default_settings.id+" .mint-address").prop("disabled", false);
             $("#"+default_settings.id+" .token-address, .token-amount, .sol-amount").prop("disabled", true).val("");
             $("#"+default_settings.id+" .mcswap-create-fees-value").html("0.000000000");
+            $("#"+default_settings.id+" .mint-address").prop("disabled", false);
+            $("#"+default_settings.id+" .mcswap-physical").prop("disabled", true).val(0);
+            $("#"+default_settings.id+" .mcswap-email").prop("disabled", true).val("");
             allowListing();
         });
 
@@ -1397,7 +1430,7 @@ class shop {
                     $("#mcswap-preview").remove();
                     $("#"+default_settings.id+" .token-address").focus();
                 },400);
-                $("#"+default_settings.id+" .token-address, #"+default_settings.id+" .token-amount, #"+default_settings.id+" .sol-amount").prop("disabled", false);
+                $("#"+default_settings.id+" .token-address, #"+default_settings.id+" .token-amount, #"+default_settings.id+" .sol-amount, #"+default_settings.id+" .mcswap-physical").prop("disabled", false);
                 const standard = $("#mcswap-cover #mcswap-preview-standard").html();
                 let base_fee = 0;
                 let temp_fee = 0;
@@ -1685,9 +1718,27 @@ class shop {
             }
         });
 
+        function validateEmail(email){
+            email = email.toLowerCase();
+            return email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        };
+
         function allowListing(){
-            if($("#"+default_settings.id+" .token-currency").html()!=""&&$("#"+default_settings.id+" .token-amount").val()>0||$("#"+default_settings.id+" .sol-amount").val()>0){
-                $("#"+default_settings.id+" .mcswap-create-it").prop("disabled", false);
+            if(
+                $("#"+default_settings.id+" .token-currency").html()!="" && 
+                $("#"+default_settings.id+" .token-amount").val()>0 || $("#"+default_settings.id+" .sol-amount").val()>0
+            ){
+                if($("#"+default_settings.id+" .mcswap-physical").val()>0){
+                    if(validateEmail($("#"+default_settings.id+" .mcswap-email").val())){
+                        $("#"+default_settings.id+" .mcswap-create-it").prop("disabled", false);
+                    }
+                    else{
+                        $("#"+default_settings.id+" .mcswap-create-it").prop("disabled", true);
+                    }
+                }
+                else{
+                    $("#"+default_settings.id+" .mcswap-create-it").prop("disabled", false);
+                }
             }
             else{
                 $("#"+default_settings.id+" .mcswap-create-it").prop("disabled", true);
@@ -1715,6 +1766,8 @@ class shop {
             if(seller!=owner){toast("Wrong Owner!", 2000, true);return;}
             if(typeof provider=="undefined" || typeof provider.isConnected=="undefined" ||provider.isConnected==false){toast("Connect Your Wallet!", 4000);return;}
             $("#"+default_settings.id+" .mcswap-create-it, #"+default_settings.id+" .mcswap-list-cancel").prop("disabled", true);
+            const physical = $("#"+default_settings.id+" .mcswap-physical").val();
+            let sellerEmail = $("#"+default_settings.id+" .mcswap-email").val();
             toast("Requesting Approval...", 4000);
             const config = {
                 "rpc": rpc,
@@ -1731,10 +1784,13 @@ class shop {
                 "lamports": parseFloat(sol_amount),
                 "tokenMint": token_address,
                 "units": parseFloat(token_amount),
+                "physical": physical,
+                "sellerEmail": sellerEmail,
             }
             let tx = false;
             if(standard=="CNFT"){
-                tx = await mcswap.cnftCreate(config);            }
+                tx = await mcswap.cnftCreate(config);            
+            }
             else if(standard=="PNFT"){
                 tx = await mcswap.pnftCreate(config);
             }

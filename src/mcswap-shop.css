@@ -350,7 +350,7 @@
     width: calc(50% - 12px);
     border-left: 1px solid #222;
     border-bottom: 1px solid #000;
-    min-height: 354px;
+    min-height: 410px;
     display: inline-block;
     vertical-align: top;
 }
@@ -378,6 +378,7 @@ li.control-li-list input.mint-address{
 li.control-li-list input.mint-address:disabled{
     opacity: 0.25;
     cursor: default;
+    margin-bottom: 1px;
 }
 li.control-li-list button.mcswap-list-it{
     cursor: pointer;
@@ -614,7 +615,7 @@ li.control-li-collections button.mcswap-update-collections:disabled:hover{
     width: calc(50% - 50.5px);
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
-    min-height: 354px;
+    min-height: 410px;
     display: inline-block;
     vertical-align: top;
 }
@@ -1037,7 +1038,7 @@ li.control-li-preferences span.mcswap-standard-error{
     border-radius: 8px;
     width: 91px;
     height: 91px;
-    margin-top: -91px;
+    margin-top: -83px;
     margin-left: 1px;
     position: absolute;
 }
@@ -1179,7 +1180,7 @@ button#mcswap-preview-collection-value:hover{
     font-size: 12px;
     width: 200px;
     float: right;
-    margin-top: -12px;
+    margin-top: -4px;
     margin-right: 2px;
     text-align: right;
     font-weight: bold;
@@ -1194,6 +1195,49 @@ button#mcswap-preview-collection-value:hover{
 
 .mcswap-save-noti{
     animation: message-blinker 1.5s linear infinite;
+}
+
+select.mcswap-physical{
+    border: 0;
+    background: #fff;
+    color: #000;
+    padding: 0 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: auto;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    transition: 0.3s;
+    margin-top: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+}  
+select.mcswap-physical:hover{
+    box-shadow: 0 0 10px 3px #676767;
+}
+select.mcswap-physical:disabled{
+    opacity: 0.25;
+}
+
+.mcswap-email{
+    border: 0;
+    background: #fff;
+    color: #000;
+    padding: 0 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 180px;
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+    line-height: 40px;
+    transition: 0.3s;
+    margin-top: 3px;
+}
+.mcswap-email:disabled{
+    opacity: 0.25;
+    cursor: default;
 }
 
 @media only screen and (max-width: 1175px) {
@@ -1331,7 +1375,7 @@ button#mcswap-preview-collection-value:hover{
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 633px) {
     .mcswap-header ul li.mcswap-name .mcswap-name-span{
         font-size: 15px;
         margin-top: -1px;
@@ -1350,6 +1394,15 @@ button#mcswap-preview-collection-value:hover{
     }
     li.control-li-list button.mcswap-create-it{
         margin-bottom: 45px;
+    }
+    li.control-li-list button.mcswap-list-cancel{
+        margin-top: 10px;
+    }
+    #mcswap-preview-img.mcswap-floater{
+        margin-top: -92px;
+    }
+    .mcswap-create-fees{
+        margin-top: -13px;
     }
 }
 
