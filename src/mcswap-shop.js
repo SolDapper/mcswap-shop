@@ -620,7 +620,6 @@ class shop {
                                 });  
                             }
                             const details = await locate(id,reference);
-                            console.log("details", details);
                             if(details=="timeout"){
                                 toast("Validation Timeout...", 4000);
                                 return;
