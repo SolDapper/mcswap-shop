@@ -1537,6 +1537,9 @@ class shop {
             else if($(this).val()==2){
                 $("#"+default_settings.id+" .mcswap-email").prop("disabled", false);
             }
+            else if($(this).val()==3){
+                $("#"+default_settings.id+" .mcswap-email").prop("disabled", false);
+            }
             allowListing();
         });
 
