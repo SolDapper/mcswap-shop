@@ -1240,6 +1240,50 @@ select.mcswap-physical:disabled{
     cursor: default;
 }
 
+img.phygital-icon{
+    float: right;
+    display: block;
+    cursor: pointer;
+    height: 20px;
+}
+
+img.phygital-icon:hover{
+    opacity: 0.5;    
+}
+
+.phygital-message{
+    width: 280px;
+    background: #fff;
+    display: none;
+    position: absolute;
+    float: left;
+    border-radius: 10px;
+    padding: 20px 20px 21px 20px;
+    z-index: 999;
+    color: #111;
+    font-family: "Ubuntu";
+    font-size: 14px;
+    box-shadow: 0 0 150px 80px #0a0a0a;
+    font-weight: 700;
+}
+.phygital-close{
+    filter: invert(100%);
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    float: right;
+    color: #010101;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.phygital-close:hover{
+    opacity: 0.5;
+}
+
+
 @media only screen and (max-width: 1175px) {
     .mcswap-controls ul.control-ul li.control-li-list,
     .mcswap-controls ul.control-ul li.control-li-preferences,
@@ -1272,11 +1316,16 @@ select.mcswap-physical:disabled{
         border-right: 0;
         border-left: 1px solid #222;
     }
-
     /* .mcswap-listings ul.mcswap-item:nth-last-child(2){
 
         border-bottom: 1px solid #222;
     } */
+}
+
+@media only screen and (max-width: 1099px) {
+    img.phygital-icon{
+        margin-top: -18px;
+    }
 }
 
 @media only screen and (max-width: 633px) {

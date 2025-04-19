@@ -105,8 +105,23 @@ const provider = window.mcswap;
 | sellers                 | csv             |  ""                   |  comma seperated seller wallets support                   |
 | solana_pay              | url             |  false                |  your solana pay api host: https://www.mcswap-pay.xyz     |
 | kiosk                   | bool/obj        |  false                |  see below                                                |
+| shipping                | bool            |  false                |  collect shipping details - requires mcswap-api           |
+| enable_edit_physical    | bool            |  true                 |  allow users to id phygitals when creating listing        |
+| default_physical        | int             |  0                    |  default item from array below                            |
+| physicals               | array           |  []                   |  array of phygital support options                        |
+
+### kiosk
 ```javascript
 {
   touch: true // true or false
 }
+```
+### physicals
+```javascript
+[
+  "Digital Asset",
+  "Phygital + Shipping",
+  "Phygital Pick-Up",
+  "Stationary Asset",
+]
 ```
