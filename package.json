@@ -1,6 +1,6 @@
 {
   "name": "mcswap-shop",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "McSwap Shop Module",
   "main": "src/mcswap-shop.js",
   "type": "module",
@@ -18,7 +18,7 @@
     "@solana/web3.js": "^1.98.0",
     "jquery": "^3.7.1",
     "mcswap-form": "^0.0.1",
-    "mcswap-sdk": "^0.5.7",
+    "mcswap-sdk": "^0.5.9",
     "toastify-js": "^1.12.0"
   },
   "repository": {
